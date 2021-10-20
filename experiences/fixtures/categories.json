@@ -1,0 +1,42 @@
+[
+    {
+      "pk": 1,
+      "model": "experiences.experiencecategory",
+      "fields": {
+        "name": "fooddrink",
+        "friendly_name": "Food and drink"
+      }
+    },
+    {
+      "pk": 2,
+      "model": "experiences.experiencecategory",
+      "fields": {
+        "name": "art",
+        "friendly_name": "Art and culture"
+      }
+    },
+    {
+      "pk": 3,
+      "model": "experiences.experiencecategory",
+      "fields": {
+        "name": "nature",
+        "friendly_name": "Nature and outdoors"
+      }
+    },
+    {
+      "pk": 4,
+      "model": "experiences.experiencecategory",
+      "fields": {
+        "name": "sport",
+        "friendly_name": "Sports"
+      }
+    },
+    {
+      "pk": 5,
+      "model": "experiences.experiencecategory",
+      "fields": {
+        "name": "sights",
+        "friendly_name": "Sightseeing"
+      }
+    }
+]

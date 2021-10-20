@@ -1,0 +1,19 @@
+[
+  {
+    "pk": 1,
+    "model": "experiences.experiences",
+    "fields": {
+      "name": "Evening Walking Tour of Dublin",
+      "description": "Some places only come alive after dark, or at least in the later hours of the day - and indeed that might be said of Dublin. At evening time the city's majestic architecture, its wrought-iron railings and bridges take on an eerie, almost Dickensian look. And yet this is Ireland, and the nearby pubs teem with banter and the strains of lively Irish music played on the fiddle and on the tin whistle. . .",
+      "location": "Dublin",
+      "price": 15.55,
+      "duration": "30",
+      "age_restricted": true,
+      "language_default": true,
+      "experience_category": 5,
+      "rating": 4.6,
+      "image": "DBWT.jpg",
+      "hosted_by": "Jim"
+    }
+  }
+]
