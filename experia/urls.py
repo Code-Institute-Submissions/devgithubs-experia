@@ -18,10 +18,12 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from home.views import HomeView
+from experiences.views import ExperienceView
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
     path('', HomeView.as_view(), name='home'),
+    path('experiences/', ExperienceView.as_view(), name='experiences'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
