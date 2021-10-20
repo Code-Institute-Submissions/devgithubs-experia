@@ -2,6 +2,10 @@ from django.db import models
 
 
 class ExperienceCategory(models.Model):
+
+    class Meta:
+        verbose_name_plural = 'Categories'
+        
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254)
 
@@ -13,6 +17,10 @@ class ExperienceCategory(models.Model):
 
 
 class Experiences(models.Model):
+
+    class Meta:
+        verbose_name_plural = 'Experiences'
+
     experience_category = models.ForeignKey(
         'ExperienceCategory', null=True, blank=True, on_delete=models.SET_NULL)
     name = models.CharField(max_length=254)
