@@ -15,5 +15,430 @@
       "image": "DBWT.jpg",
       "hosted_by": "Jim"
     }
+  },
+  {
+    "pk": 2,
+    "model": "experiences.experiences",
+    "fields": {
+      "name": "Coastal Craft Beer & Seafood Trail With A local",
+      "description": "Just a short trip from Dublin, is the beautiful fishing village of Howth, home of the freshest locally caught seafood and stunning views of the Irish coastline. We'll meet at the Legendary Bloody Stream Pub, where we'll sample some of the finest craft beers from North County Dublin and listen to tales of Howth's ancient past.",
+      "location": "Dublin",
+      "price": 79,
+      "duration": "03:30",
+      "age_restricted": true,
+      "language_default": true,
+      "experience_category": 1,
+      "rating": 4.96,
+      "image": "CCBS.jpg",
+      "hosted_by": "Martin"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "experiences.experiences",
+    "fields": {
+      "name": "Forge a silver ring with Jewellers",
+      "description": "Learn how to make a sterling silver ring from scratch, with our AWARD WINNING EXPERIENCE! Start off by marking your silver to the length you require by choosing which finger you would like it on. Then, you'll use a handsaw to cut it to size, you'll learn how to form the ring, using a mallet to shape it to the ring mandrel.",
+      "location": "Dublin",
+      "price": 75,
+      "duration": "00:60",
+      "age_restricted": true,
+      "language_default": true,
+      "experience_category": 2,
+      "rating": 4.7,
+      "image": "FSR.jpg",
+      "hosted_by": "Mary and Shannon"
+    }
+  },
+  {
+    "pk": 4,
+    "model": "experiences.experiences",
+    "fields": {
+      "name": "Sunset Phoenix Park Nature & History walking tours",
+      "description": "We will meet at the entrance to the Phoenix Park(Europe’s largest municipal park), then we will have a wonderful casual walk through the most beautiful and interesting parts of this huge city park all while the sun sets slowly above us, finally setting just as we finish our tour!",
+      "location": "Dublin",
+      "price": 18,
+      "duration": "00:90",
+      "age_restricted": false,
+      "language_default": true,
+      "experience_category": 3,
+      "rating": 4.3,
+      "image": "PPW.jpg",
+      "hosted_by": "Robert"
+    }
+  },
+  {
+    "pk": 5,
+    "model": "experiences.experiences",
+    "fields": {
+      "name": "Attend Gaelic Football/Hurling game",
+      "description": "We will meet at the entrance to the historically significant Croke Park stadium, the home of Gaelic games in Ireland. We will attend a game and visit the museum aftterwards to learn more about this special stadium.",
+      "location": "Dublin",
+      "price": 28.99,
+      "duration": "00:90",
+      "age_restricted": false,
+      "language_default": true,
+      "experience_category": 4,
+      "rating": 4.55,
+      "image": "CPT.jpg",
+      "hosted_by": "Theresa"
+    }
+  },
+  {
+    "pk": 6,
+    "model": "experiences.experiences",
+    "fields": {
+      "name": "Dublin City Bike Tour by e-bike",
+      "description": "You’ll get to experience Dublin up close and personal with a bike ride. You’ll get a real sense of the city and what it has to offer to a visitor. As well as visiting some of the major attractions, you’ll get to experience a very old and traditional area.",
+      "location": "Dublin",
+      "price": 34.55,
+      "duration": "01:30",
+      "age_restricted": true,
+      "language_default": true,
+      "experience_category": 5,
+      "rating": 4.34,
+      "image": "DBR.jpg",
+      "hosted_by": "Hugh"
+    }
+  },
+  {
+    "pk": 7,
+    "model": "experiences.experiences",
+    "fields": {
+      "name": "Premium Food & Whiskey Experience",
+      "description": "Nothing goes better with Irish food than a glass of Irish whiskey. Let us guide you through the best ways to pair Irish whiskey with artisan cheeses, fruit and handcrafted chocolates.",
+      "location": "Dublin",
+      "price": 66.55,
+      "duration": "02:00,",
+      "age_restricted": true,
+      "language_default": true,
+      "experience_category": 1,
+      "rating": 5,
+      "image": "PWE.jpg",
+      "hosted_by": "Andrew"
+    }
+  },
+  {
+    "pk": 8,
+    "model": "experiences.experiences",
+    "fields": {
+      "name": "Women in Irish History, Walking Tour",
+      "description": "We will spend some time walking along those streets where, during the last 200 years, brave women (and men!) fought and faced their destiny for the love of their Irish identity.",
+      "location": "Dublin",
+      "price": 12.80,
+      "duration": "02:00",
+      "age_restricted": false,
+      "language_default": false,
+      "experience_category": 2,
+      "rating": 5,
+      "image": "WII.jpg",
+      "hosted_by": "Julia"
+    }
+  },
+  {
+    "pk": 9,
+    "model": "experiences.experiences",
+    "fields": {
+      "name": "Galway's legendary walking tour",
+      "description": "The legendary tour centers around the tale of the Lynch family. Its a fascinating tale of how Walter Lynch is accused and tried for the murder of a visiting Spaniard who was a little too interested in his beautiful wife to be...or was he?",
+      "location": "Galway",
+      "price": 13,
+      "duration": "00:90",
+      "age_restricted": false,
+      "language_default": true,
+      "experience_category": 2,
+      "rating": 4.90,
+      "image": "GWT.jpg",
+      "hosted_by": "Neil"
+    }
+  },
+  {
+    "pk": 10,
+    "model": "experiences.experiences",
+    "fields": {
+      "name": "Irish Homemade Baking Scones and Bread",
+      "description": "We will bake fruit, lavender and berry scones, and spelt or brown bread. I believe in the hands on experience for my guests - from handling ingredients to kneading dough.",
+      "location": "Galway",
+      "price": 43,
+      "duration": "00:90",
+      "age_restricted": false,
+      "language_default": true,
+      "experience_category": 1,
+      "rating": 4.93,
+      "image": "KBG.jpg",
+      "hosted_by": "Kate"
+    }
+  },
+  {
+    "pk": 11,
+    "model": "experiences.experiences",
+    "fields": {
+      "name": "Electric Fat Bike Galway Tour",
+      "description": "Ride an electric fat tyre bike to experience Galways' spectacular surroundings, during this HALF DAY adventure tour. Our new fleet of RadRhino bikes meet all road safety requirements.",
+      "location": "Galway",
+      "price": 39,
+      "duration": "04:00",
+      "age_restricted": true,
+      "language_default": true,
+      "experience_category": 3,
+      "rating": 5,
+      "image": "EBT.jpg",
+      "hosted_by": "Miles"
+    }
+  },
+  {
+    "pk": 12,
+    "model": "experiences.experiences",
+    "fields": {
+      "name": "Private Guided Car Tour of The Burren",
+      "description": "Off we go, travelling south to see and feel the unique land that is The Burren, visiting my home town of Kinvara, continuing via Lisdoonvarna (home of the Matchmaking Festival) to the 'Must See' highlight The Cliffs of Moher",
+      "location": "Galway",
+      "price": 125,
+      "duration": "08:00",
+      "age_restricted": false,
+      "language_default": true,
+      "experience_category": 5,
+      "rating": 4.5,
+      "image": "BCT.jpg",
+      "hosted_by": "Elvis"
+    }
+  },
+  {
+    "pk": 13,
+    "model": "experiences.experiences",
+    "fields": {
+      "name": "Shuck Off For Oyster Lovers",
+      "description": "To begin, you’ll discover the inner workings of a coastal oyster warehouse. Learn the local history and be wowed by the science of how tides provide the ideal water for oysters. Then, explore our aquarium that features some of the fascinating creatures.",
+      "location": "Galway",
+      "price": 33,
+      "duration": "00:90",
+      "age_restricted": true,
+      "language_default": true,
+      "experience_category": 1,
+      "rating": 4.98,
+      "image": "OSG.jpg",
+      "hosted_by": "Gerry"
+    }
+  },
+  {
+    "pk": 14,
+    "model": "experiences.experiences",
+    "fields": {
+      "name": "Row a traditional Irish boat",
+      "description": "Discover the inner workings of a traditional Irish row boat. Learn the local history and be wowed by the importance of these vessels to local people. Then, with a little elbow grease, row a boat for yourself.",
+      "location": "Galway",
+      "price": 45,
+      "duration": "02:00",
+      "age_restricted": true,
+      "language_default": true,
+      "experience_category": 3,
+      "rating": 4.25,
+      "image": "RB.jpg",
+      "hosted_by": "Arthur"
+    }
+  },
+  {
+    "pk": 15,
+    "model": "experiences.experiences",
+    "fields": {
+      "name": "Cliffs of Moher Hike from Doolin",
+      "description": "The Cliffs Of Moher is often referred to as the 8th wonder of the world. This guided tour will take you on an 8km adventure from the small fishing village of Doolin, along a breathtaking route to the top of the Cliffs Of Moher.",
+      "location": "Galway",
+      "price": 18,
+      "duration": "03:00",
+      "age_restricted": true,
+      "language_default": true,
+      "experience_category": 5,
+      "rating": 5,
+      "image": "CM.jpg",
+      "hosted_by": "Andrew"
+    }
+  },
+  {
+    "pk": 16,
+    "model": "experiences.experiences",
+    "fields": {
+      "name": "Alpaca Trekking Through A Magical Forest",
+      "description": "Alpacas take to trekking quite easily. They walk in a line, one behind the other on a head collar and lead rope. Our guided treks start at the alpacas' barn and ascend into the forest. Each trek lasts about 1.5 hours.",
+      "location": "Cork",
+      "price": 39.99,
+      "duration": "02:00",
+      "age_restricted": false,
+      "language_default": true,
+      "experience_category": 3,
+      "rating": 5,
+      "image": "ATT.jpg",
+      "hosted_by": "Mia"
+    }
+  },
+  {
+    "pk": 17,
+    "model": "experiences.experiences",
+    "fields": {
+      "name": "Glengarriff Bay Sea Kayaking Tour",
+      "description": "Spend A Relaxing & Thrilling Afternoon Exploring Glengarriff Bay By Sea Kayak. Learn the skills to master your kayak with an experienced qualified guide.",
+      "location": "Cork",
+      "price": 75,
+      "duration": "03:00",
+      "age_restricted": true,
+      "language_default": true,
+      "experience_category": 4,
+      "rating": 4.88,
+      "image": "SEA.jpg",
+      "hosted_by": "Nathan"
+    }
+  },
+  {
+    "pk": 18,
+    "model": "experiences.experiences",
+    "fields": {
+      "name": "Cobh Rebel Walking Tour",
+      "description": "Visit 16 local sites from the Irish War of Independence, over an 80 minute walk. see location of ambushes where the Cobh rebel volunteers took on the might of an Empire.",
+      "location": "Cork",
+      "price": 18,
+      "duration": "02:00",
+      "age_restricted": false,
+      "language_default": true,
+      "experience_category": 5,
+      "rating": 4.95,
+      "image": "REB.jpg",
+      "hosted_by": "Kieran"
+    }
+  },
+  {
+    "pk": 19,
+    "model": "experiences.experiences",
+    "fields": {
+      "name": "Creating an Irish Hardwood Ornament",
+      "description": "This is a more hands on demonstration for a guest where you will each sand, seal, wax embellish and finish a turned piece to your own specifications to take home with you.",
+      "location": "Cork",
+      "price": 40,
+      "duration": "00:90",
+      "age_restricted": true,
+      "language_default": true,
+      "experience_category": 2,
+      "rating": 4.70,
+      "image": "WOD.jpg",
+      "hosted_by": "David"
+    }
+  },
+  {
+    "pk": 20,
+    "model": "experiences.experiences",
+    "fields": {
+      "name": "Fishing / sightseening in Cork Harbour",
+      "description": "I will meet you at the marina on the Hugh Coveney Pier in Crosshaven. For those interested in doing a fishing trip I will supply all the necessary equipment. If you are keen sea angler your welcome to bring along your own gear and bait",
+      "location": "Cork",
+      "price": 80,
+      "duration": "04:30",
+      "age_restricted": true,
+      "language_default": true,
+      "experience_category": 1,
+      "rating": 4.90,
+      "image": "FISH.jpg",
+      "hosted_by": "Fergus"
+    }
+  },
+  {
+    "pk": 21,
+    "model": "experiences.experiences",
+    "fields": {
+      "name": "Learn how to throw axes in Belfast",
+      "description": "Once safety is complete we'll begin focussing on the basic technique of axe throwing and what is involved to do it well. Then it is axe throwing time where guests take their position in front of our targets!",
+      "location": "Belfast",
+      "price": 27,
+      "duration": "00:60",
+      "age_restricted": true,
+      "language_default": true,
+      "experience_category": 4,
+      "rating": 4.96,
+      "image": "TAB.jpg",
+      "hosted_by": "Gareth"
+    }
+  },
+  {
+    "pk": 22,
+    "model": "experiences.experiences",
+    "fields": {
+      "name": "Political Murals, StreetArt and Troubles",
+      "description": "Let me take you on a walking tour, through the streets of Belfast, and using the medium of StreetArt and Political Murals. Share with you, how the people of Northern Ireland are coming together in Peace and Reconciliation after its recent conflicts.",
+      "location": "Belfast",
+      "price": 22,
+      "duration": "02:30",
+      "age_restricted": true,
+      "language_default": true,
+      "experience_category": 2,
+      "rating": 5,
+      "image": "BMT.jpg",
+      "hosted_by": "Marti"
+    }
+  },
+  {
+    "pk": 23,
+    "model": "experiences.experiences",
+    "fields": {
+      "name": "Titanic experience",
+      "description": "Located beside the H & W Drawing Offices and Hamilton Graving Dock – the very place where Titanic was designed, built and launched, We explore the Titanic from her conception, through her construction and launch, maiden voyage and subsequent demise.",
+      "location": "Belfast",
+      "price": 45,
+      "duration": "02:30",
+      "age_restricted": false,
+      "language_default": true,
+      "experience_category": 2,
+      "rating": 4.3,
+      "image": "TBE.jpg",
+      "hosted_by": "Jennifer"
+    }
+  },
+  {
+    "pk": 24,
+    "model": "experiences.experiences",
+    "fields": {
+      "name": "Explore Northern Ireland's first craft distillery",
+      "description": "While sipping a gin cocktail guests are introduced to the history of Shortcross Gin and Rademon Estate Distillery.",
+      "location": "Belfast",
+      "price": 33.50,
+      "duration": "00:90",
+      "age_restricted": true,
+      "language_default": true,
+      "experience_category": 1,
+      "rating": 4.18,
+      "image": "GIN.jpg",
+      "hosted_by": "Craig"
+    }
+  },
+  {
+    "pk": 25,
+    "model": "experiences.experiences",
+    "fields": {
+      "name": "Belfast Bike Tour, Feel the City",
+      "description": "We’ll check out the titanic slipways, a world war 1 battle ship and a 1970’s floating disco which used to ferry passengers to the Titanic itself. Not forgetting to stop for snaps at a Game of Thrones filming location.",
+      "location": "Belfast",
+      "price": 28.50,
+      "duration": "03:00",
+      "age_restricted": false,
+      "language_default": true,
+      "experience_category": 5,
+      "rating": 4.92,
+      "image": "BBIKE.jpg",
+      "hosted_by": "David"
+    }
+  },
+  {
+    "pk": 26,
+    "model": "experiences.experiences",
+    "fields": {
+      "name": "Horse experience with Family and friends",
+      "description": "You will be greeted at our stables by myself and Kirsty. You will be shown our tack room area where we can introduce ourselves and you can get a horse riding hat fitted. We will introduce you to our horses and a visit to the yard stables.",
+      "location": "Belfast",
+      "price": 40.50,
+      "duration": "02:00",
+      "age_restricted": false,
+      "language_default": true,
+      "experience_category": 3,
+      "rating": 4.85,
+      "image": "HORSE.jpg",
+      "hosted_by": "Patricia"
+    }
   }
 ]
