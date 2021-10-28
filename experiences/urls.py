@@ -1,6 +1,9 @@
 from django.urls import path
-from .views import ExperienceView
+from . import views
+# from .views import ExperienceView
+
 
 urlpatterns = [
-    path('', ExperienceView.as_view(), name='experiences'),
+    path('', views.all_experiences, name='experiences'),
+    path('<experience_id>', views.experiences_detail, name='experiences_detail'),
 ]
