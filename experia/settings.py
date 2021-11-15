@@ -14,6 +14,13 @@ from pathlib import Path
 
 import os
 
+from os import path
+
+if path.exists('env.py'):
+    import env
+
+SECRET_KEY = os.environ.get('SECRET_KEY')
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -22,7 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-g0!%x3jcz4(jsph18t9ecke0=73!n80psd1(@2g8_-#1eu4)9y'
+# SECRET_KEY = 'django-insecure-g0!%x3jcz4(jsph18t9ecke0=73!n80psd1(@2g8_-#1eu4)9y'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
