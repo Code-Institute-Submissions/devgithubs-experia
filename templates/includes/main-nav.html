@@ -5,9 +5,9 @@
                 Experiences
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item ">By Rating</a>
-                <a href="" class="dropdown-item ">By City</a>
+                <a href="{% url 'experiences' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                <a href="{% url 'experiences' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
+                <a href="{% url 'experiences' %}?sort=location&direction=asc" class="dropdown-item ">By City</a>
                 <a href="{% url 'experiences' %}" class="dropdown-item">All Experiences</a>
             </div>
         </li>
