@@ -41,6 +41,8 @@ def all_experiences(request):
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 experiences = experiences.annotate(lower_name=Lower('name'))
+            if sortkey == 'experience_category':
+                sortkey = 'experience_category__name'
 
             if 'direction' in request.GET:
                 direction = request.GET['direction']
