@@ -2,7 +2,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Experiences
+from .models import Experiences, ExperienceCategory
 
 
 # class ExperienceView(TemplateView):
@@ -30,6 +30,7 @@ def all_experiences(request):
     """
     experiences = Experiences.objects.all()
     query = None
+    categories = None
     sort = None
     direction = None
 
@@ -47,6 +48,11 @@ def all_experiences(request):
                     sortkey = f'-{sortkey}'
             experiences = experiences.order_by(sortkey)
 
+        if 'experience_category' in request.GET:
+            categories = request.GET['experience_category'].split(',')
+            experiences = experiences.filter(experience_category__name__in=categories)
+            categories = ExperienceCategory.objects.filter(name__in=categories)
+
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
@@ -61,6 +67,7 @@ def all_experiences(request):
     context = {
         'experiences': experiences,
         'search_term': query,
+        'current_categories': categories,
         'current_sorting': current_sorting,
     }
 
