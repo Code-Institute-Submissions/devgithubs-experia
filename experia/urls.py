@@ -26,5 +26,6 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('', HomeView.as_view(), name='home'),
     path('experiences/', include('experiences.urls')),
+    path('bag/', include('bag.urls')),
     # path('experiences/', ExperienceView.as_view(), name='experiences'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
