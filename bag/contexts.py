@@ -13,7 +13,7 @@ def bag_contents(request):
 
 
     context = {
-        'bag_contents': bag_contents,
+        'bag_items': bag_items,
         'total': total,
         'count': count,
     }
