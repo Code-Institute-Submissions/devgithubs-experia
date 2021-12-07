@@ -88,7 +88,6 @@
                     <tr>
                         <td colspan="5" class="pt-5 text-right">
                             <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
-                            <h6>Delivery: $</h6>
                             <h4 class="mt-4"><strong>Grand Total: $</strong></h4>
 
                         </td>
@@ -101,7 +100,7 @@
                                 </span>
                                 <span class="text-uppercase">Keep Exploring</span>
                             </a>
-                            <a href="" class="btn btn-black rounded-0 btn-lg">
+                            <a href="{% url 'checkout' %}" class="btn btn-black rounded-0 btn-lg">
                                 <span class="text-uppercase">Secure Checkout</span>
                                 <span class="icon">
                                     <i class="fas fa-lock"></i>
