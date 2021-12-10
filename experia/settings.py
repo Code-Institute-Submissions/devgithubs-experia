@@ -183,3 +183,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Add discount % or code VARS here.
 # possibly DATE var to use as discount code at checkout.
+
+# stripe
+STRIPE_CURRENCY = 'usd'
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
