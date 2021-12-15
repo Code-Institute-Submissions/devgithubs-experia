@@ -28,5 +28,6 @@ urlpatterns = [
     path('experiences/', include('experiences.urls')),
     path('bag/', include('bag.urls')),
     path('checkout/', include('checkout.urls')),
+    path('profile/', include('profiles.urls')),
     # path('experiences/', ExperienceView.as_view(), name='experiences'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
