@@ -58,7 +58,7 @@ def remove_from_bag(request, item_id):
     try:
         experience = get_object_or_404(Experiences, pk=item_id)
         bag = request.session.get('bag', {})
-        bag.pop[item_id]
+        bag.pop(item_id)
         messages.success(request, f'Removed {experience.name} from your bag')
 
         request.session['bag'] = bag
