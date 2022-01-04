@@ -8,9 +8,7 @@ class Wishlist(models.Model):
     Model to show all product items within the users wishlist
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    experiences = models.ManyToManyField(Experiences,
-                                      through="WishlistItem",
-                                      )
+    experiences = models.ManyToManyField(Experiences, through="WishlistItem")
 
     def __str__(self):
         return Wishlist, f'({self.user})'
