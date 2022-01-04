@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+
+<div class="overlay"></div>
+<div class="container mb-2">
+    <div class="row">
+        <div class="col">
+            <hr>
+            <h2 class="logo-font mb-4">{{ user }}'s' Wishlist &#128154;</h2>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            {% if wishlist %}
+            <div class="table-responsive rounded">
+                <table class="table table-sm table-borderless">
+                    <thead class="text-black">
+                        <tr>
+                            <th scope="col">Experience Info</th>
+                            <th scope="col"></th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Duration</th>
+                            <th scope="col">Suitability</th>
+                            <th scope="col">Location</th>
+                            <th scope="col">Language</th>
+                        </tr>
+                    </thead>
+
+                    {% for wish in wishlist %}
+                        <tr>
+                            <td class="p-3 w-25">
+                            {% if wish.product.image %}
+                                <img class="card-img-top img-fluid" src="{{ wish.product.image.url }}" alt="{{ wish.name }}">
+
+                            {% else %}
+                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ wish.name }}">
+
+                            {% endif %}
+                            </td>
+                            <td class="py-3">
+                                <p class="my-0"><strong>{{ wish.product.name }}</strong></p>
+                                <p class="my-0 small text-muted">Host: {{ wish.product.hosted_by }}</p>
+                            </td>
+                            <td class="py-3">
+                                <p class="my-0">${{ wish.product.price }} per guest</p>
+                            </td>
+                            <td class="py-3">
+                                <p class="my-0">{{ wish.product.duration }} mins</p>
+                            </td>
+                            {% if age_restricted %}
+                                <td class="py-3">
+                                    <p class="my-0">Not suitable for people under the age of 18</p>
+                                </td>
+                            {% else %}
+                                <td class="py-3">
+                                    <p class="my-0">No age restrictions</p>
+                                </td>
+                            {% endif %}
+                            <td class="py-3">
+                                <p class="my-0">{{ wish.product.location }}</p>
+                            </td>
+                            {% if language_default %}
+                                <td class="py-3">
+                                    <p class="my-0">This experience is offered in English only.</p>
+                                </td>
+                            {% else %}
+                                <td class="py-3">
+                                    <p class="my-0">This experience is offered in other languages, please check with the host.</p>
+                                </td>
+                            {% endif %}
+
+                            <td class="py-3 w-10">
+                                <a class="remove-item text-danger float-right" id="remove_{{ wish.item_id }}"><small>❌</small></a>
+                            </td>
+
+                        </tr>
+                    {% endfor %}
+
+                    <tr>
+                        <td colspan="5" class="text-right">
+                            <a href="{% url 'experiences' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                                <span class="icon">
+                                    <i class="fas fa-chevron-left"></i>
+                                </span>
+                                <span class="text-uppercase">Keep Exploring</span>
+                            </a>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            {% else %}
+            <p class="lead mb-5">You have not selected any experiences.</p>
+            <a href="{% url 'experiences' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                <span class="icon">
+                    <i class="fas fa-chevron-left"></i>
+                </span>
+                <span class="text-uppercase">Keep Exploring</span>
+            </a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
