@@ -10,6 +10,27 @@
 {% endblock %}
 
 {% block content %}
+<!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Your Cookie Settings</h5>
+            </div>
+            <div class="modal-body">
+                Experia asks you to accept cookies for performance purposes. 
+                To get more information or amend your preferences, click the ‘More Information’ 
+                button or visit 'Cookie Settings' at the bottom of the website.
+                To get more information about these cookies and the processing of your personal data,
+                check our Privacy & Cookie Policy. Do you accept these cookies and the processing of
+                personal data involved?
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Yes, continue</button>
+            </div>
+        </div>
+        </div>
+    </div>
     <div class="container h-100">
         <div class="row h-100">
             <div class="jumbotron col-7 col-md-6 my-auto">
@@ -24,4 +45,17 @@
             </div>
         </div>
     </div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<script type="text/javascript">
+ $(window).on('load', function() {
+     if (sessionStorage.getItem('modal') !== 'true') {
+         $('#exampleModalCenter').modal('show');
+         sessionStorage.setItem('modal','true');     
+    }
+});
+
+</script>
 {% endblock %}
