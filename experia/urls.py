@@ -18,6 +18,7 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from home.views import HomeView
+from profiles.views import PostExperienceView
 # from experiences.views import ExperienceView
 
 
@@ -29,5 +30,7 @@ urlpatterns = [
     path('bag/', include('bag.urls')),
     path('checkout/', include('checkout.urls')),
     path('profile/', include('profiles.urls')),
+    path('profile/post_experience/', PostExperienceView.as_view(), name='post_experience'),
+    path('wishlist/', include('wishlist.urls')),
     # path('experiences/', ExperienceView.as_view(), name='experiences'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
