@@ -12,7 +12,7 @@ class ExperienceCategory(models.Model):
     def __str__(self):
         return self.name
 
-    def get_friendly_name():
+    def get_friendly_name(self):
         return self.friendly_name
 
 
@@ -31,7 +31,7 @@ class Experiences(models.Model):
     age_restricted = models.BooleanField(default=False)
     language_default = models.BooleanField(default=False)
     image = models.ImageField(null=True, blank=True)
-    rating = models.DecimalField(max_digits=6, decimal_places=2)
+    rating = models.DecimalField(max_digits=6, decimal_places=2, blank=True)
     hosted_by = models.CharField(max_length=254)
     
     def __str__(self):
