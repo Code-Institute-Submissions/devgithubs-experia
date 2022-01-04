@@ -139,6 +139,11 @@ body {
     
 }
 
+.fa-heart{
+    color:#28a745;
+    border: #343a40 5px;
+}
+
 .heart-button {
     position: absolute;
     top: 0;
