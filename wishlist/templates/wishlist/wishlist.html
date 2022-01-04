@@ -16,13 +16,13 @@
     <div class="row">
         <div class="col">
             <hr>
-            <h2 class="logo-font mb-4">{{ user }}'s' Wishlist &#128154;</h2>
+            <h2 class="logo-font mb-4">{{ user }}'s Wishlist &#128154;</h2>
             <hr>
         </div>
     </div>
     <div class="row">
         <div class="col">
-            {% if wishlist %}
+            {% if wishlist.experiences.all %}
             <div class="table-responsive rounded">
                 <table class="table table-sm table-borderless">
                     <thead class="text-black">
@@ -37,11 +37,11 @@
                         </tr>
                     </thead>
 
-                    {% for wish in wishlist %}
+                    {% for wish in wishlist.experiences.all %}
                         <tr>
                             <td class="p-3 w-25">
-                            {% if wish.product.image %}
-                                <img class="card-img-top img-fluid" src="{{ wish.product.image.url }}" alt="{{ wish.name }}">
+                            {% if wish.image %}
+                                <img class="card-img-top img-fluid" src="{{ wish.image.url }}" alt="{{ wish.name }}">
 
                             {% else %}
                                 <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ wish.name }}">
@@ -49,14 +49,14 @@
                             {% endif %}
                             </td>
                             <td class="py-3">
-                                <p class="my-0"><strong>{{ wish.product.name }}</strong></p>
-                                <p class="my-0 small text-muted">Host: {{ wish.product.hosted_by }}</p>
+                                <p class="my-0"><strong>{{ wish.name }}</strong></p>
+                                <p class="my-0 small text-muted">Host: {{ wish.hosted_by }}</p>
                             </td>
                             <td class="py-3">
-                                <p class="my-0">${{ wish.product.price }} per guest</p>
+                                <p class="my-0">€{{ wish.price }} per guest</p>
                             </td>
                             <td class="py-3">
-                                <p class="my-0">{{ wish.product.duration }} mins</p>
+                                <p class="my-0">{{ wish.duration }} mins</p>
                             </td>
                             {% if age_restricted %}
                                 <td class="py-3">
@@ -68,7 +68,7 @@
                                 </td>
                             {% endif %}
                             <td class="py-3">
-                                <p class="my-0">{{ wish.product.location }}</p>
+                                <p class="my-0">{{ wish.location }}</p>
                             </td>
                             {% if language_default %}
                                 <td class="py-3">
@@ -81,7 +81,7 @@
                             {% endif %}
 
                             <td class="py-3 w-10">
-                                <a class="remove-item text-danger float-right" id="remove_{{ wish.item_id }}"><small>❌</small></a>
+                                <a class="btn btn-outline-black" href="{% url 'remove_from_wishlist' wish.id %}">Remove</a>
                             </td>
 
                         </tr>
