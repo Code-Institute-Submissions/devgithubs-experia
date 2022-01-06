@@ -4,6 +4,11 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 
 from django_countries.fields import CountryField
+from experiences.models import Experiences
+
+
+class PostExperienceView(Experiences, models.Model):
+    pass
 
 
 class UserProfile(models.Model):
