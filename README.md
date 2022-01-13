@@ -17,7 +17,7 @@ The project goal or 'use case' of the website is to act as a platform where peop
 The project is also to give me experience building a full stack e-Commerce website that handles payments.
 
 #### Ideation
-
+The concept for Experia came from my own experiences travelling, I found sometimes it would be hard to find things to do in some cities or I was not interested in what was on offer.
 #### Site owner goals
 
 #### User goals
