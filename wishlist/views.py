@@ -7,7 +7,7 @@ from django.contrib import messages
 from .models import Wishlist
 
 
-
+@login_required
 def wishlist(request):
     """
     A view to render the user's wishlist
@@ -28,7 +28,7 @@ def wishlist(request):
         """ count all the items in the favourites"""
         return sum(item['quantity'] for item in self.wishlist.values())
 
-
+@login_required
 def add_to_wishlist(request, item_id):
     """
     Add a product from the store to the
@@ -44,7 +44,7 @@ def add_to_wishlist(request, item_id):
 
     return redirect(redirect_url)
     
-
+@login_required
 def remove_from_wishlist(request, item_id):
     """
     Add a product from the store to the
