@@ -1,5 +1,5 @@
 from django import forms
-from .models import UserProfile, Experiences
+from .models import UserProfile
 from experiences.models import ExperienceCategory
 
 
@@ -33,22 +33,3 @@ class UserProfileForm(forms.ModelForm):
                 self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'border-black rounded-0 profile-form-input'
             self.fields[field].label = False
-
-        
-class PostExperienceForm(forms.ModelForm):
-    class Meta:
-        model = Experiences
-        fields = '__all__'
-        
-        # def __str__(self):
-        #     return Experiences.name
-
-    def __init__(self, *args, **kwargs):
-        """
-        Use friendly name on experience form for categories
-        """
-        super().__init__(*args, **kwargs)
-        categories = ExperienceCategory.objects.all()
-        friendly_names = [(c.id, c.get_friendly_name()) for c in categories]
-
-        self.fields['experience_category'].choices = friendly_names
