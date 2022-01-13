@@ -49,7 +49,8 @@ class PostExperienceView(TemplateView):
         return render(request, self.template_name, context)
 
 
-def remove_experience(item_id):
+def remove_experience(request, item_id):
     experience = get_object_or_404(Experiences, pk=item_id)
     experience.delete()
+    messages.success(request, 'Removed from your experiences')
     return redirect(reverse('host'))
