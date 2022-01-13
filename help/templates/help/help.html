@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="overlay"></div>
+<div class="container mb-2">
+    <div class="row">
+        <div class="col">
+
+            <hr>
+        </div>
+    </div>
+<!--followed tutorial on-->
+<!--https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-scrollspy.php-->
+<style>
+    body{
+        position: relative; /* required */
+    }
+        
+    /* Custom style to stick list group on top */
+    .list-group{
+        position: sticky;
+        top: 15px;
+    }
+</style>
+
+<body data-bs-spy="scroll" data-bs-offset="15" data-bs-target="#myScrollspy">
+    <div class="container-lg my-2">
+        <h1>Experia terms & conditions</h1>
+        <p class="lead"><i>Scroll this page and see our general terms and conditions.</i></p>
+        <div class="row">
+            <div class="col-sm-3" id="myScrollspy">
+                <div class="list-group">
+                    <a class="list-group-item list-group-item-action" href="#section1">Terms of use</a>
+                    <a class="list-group-item list-group-item-action" href="#section2">Privacy statement</a>
+                    <a class="list-group-item list-group-item-action" href="#section3">Payments</a>
+                    <a class="list-group-item list-group-item-action" href="#section4">Discount codes</a>
+                    <a class="list-group-item list-group-item-action" href="#section5">Governing law and jurisdiction</a>
+                </div>
+            </div>
+            <div class="col-sm-9">
+                <div class="pb-3" id="section1">
+                    <h2>Terms of use</h2>
+                    <p>This website is offered to you and is conditioned on your acceptance without modification of the conditions, terms and notices contained in these terms and conditions as they exist at the time of your relevant use of the website including when any travel reservation is made (as applicable). All use of your account by you and use by us of the information related to your account are subject to these terms and conditions.</p>
+                </div>
+                <hr>
+                <div class="pb-3" id="section2">
+                    <h2>Privacy statement</h2>
+                    <p>When you create an account on one of our sites, sign up to receive offers or information or make a booking using our platform, you give us your personal information. We also collect such information through automated technology such as cookies placed on your browser, with your consent where applicable, when you visit our sites or download and use our Apps. We also receive information from affiliated companies within Experia Group, as well as business partners and other third parties, which help us to improve our platform and associated tools and services, update and maintain accurate records, potentially detect and investigate fraud and more effectively market our services.</p>
+                </div>
+                <hr>
+                <div class="pb-3" id="section3">
+                    <h2>Payments</h2>
+                    <p>The price of services booked on the website or by telephone must be paid to Experia.com. Payment may be charged by more than one party (as will be shown on your bank or credit card statement) however the total amount charged will not exceed the total price of the services. Please refer to the details shown during the reservation process to confirm how and when payment will be made.</p>
+                </div>
+                <hr>
+                <div class="pb-3" id="section4">
+                    <h2>Discount codes</h2>
+                    <p>From time to time, there may be discount codes which are available for use on this website.  Discount codes ("Coupons") may be applied to pre-paid property bookings, excluding bookings at non-participating properties whose list will be made available along with each specific Coupon.   Participating properties are subject to change at any time. Coupons are subject to the rules below and for further specific restrictions on use of Coupons please see the relevant Coupon communication.</p>
+                </div>
+                <hr>
+                <div class="pb-3" id="section5">
+                    <h2>Governing law and jurisdiction</h2>
+                    <p>This agreement is governed by the laws of Ireland. You hereby consent to the exclusive jurisdiction and venue of the Irish courts in all disputes arising out of or relating to the use of this website. Use of this website is unauthorized in any jurisdiction that does not give effect to all provisions of these terms and conditions, including, without limitation, this section.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>    
+
+    
+</div>
+
+{% endblock %}
