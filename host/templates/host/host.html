@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+
+<div class="overlay"></div>
+<div class="container mb-2">
+    <div class="row">
+        <div class="col">
+            <hr>
+            <h2 class="logo-font mb-4">Create an Experience &#128154;</h2>
+            <hr>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-lg-6">
+            <form class="mt-3" action="{% url 'host' %}" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ experience_form|crispy }}
+                <br>
+                <button class="btn btn-black rounded-0 text-uppercase float-right" type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="col-12 col-lg-6">
+            <p class="text-muted">{{ user }}'s current Experiences</p>
+            <hr>
+            {% if created_experience.all %}
+            <div class="table-responsive rounded">
+                <table class="table table-sm table-borderless">
+                    <thead class="text-black">
+                        <tr>
+                            <th scope="col">Image</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Duration</th>
+                            <th scope="col">Suitability</th>
+                            <th scope="col">Location</th>
+                        </tr>
+                    </thead>
+                        {% for created in created_experience %}
+                        <tr>
+                            <td class="p-3">
+                                {% if created.image %}
+                                    <img class="img-left img-thumbnail" src="{{ created.image.url }}" alt="{{ created.name }}">
+
+                                {% else %}
+                                    <img class="img-left img-thumbnail" src="{{ MEDIA_URL }}noimage.png" alt="{{ created.name }}">
+
+                                {% endif %}
+                            </td>
+                            <td class="py-3">
+                                <p class="my-0"><strong>{{ created.name }}</strong></p>
+                                <p class="my-0 small text-muted">Host: {{ created.hosted_by }}</p>
+                            </td>
+                            <td class="py-3">
+                                <p class="my-0">€{{ created.price }} per guest</p>
+                            </td>
+                            <td class="py-3">
+                                <p class="my-0">{{ created.duration }} mins</p>
+                            </td>
+                            {% if age_restricted %}
+                                <td class="py-3">
+                                    <p class="my-0">Not suitable for people under the age of 18</p>
+                                </td>
+                            {% else %}
+                                <td class="py-3">
+                                    <p class="my-0">No age restrictions</p>
+                                </td>
+                            {% endif %}
+                            <td class="py-3">
+                                <p class="my-0">{{ created.location }}</p>
+                            </td>
+                            <td class="py-3 w-10">
+                                <a class="btn-sm btn-outline-black" href="">Edit</a>
+                            </td>
+                            <td class="py-3 w-10">
+                                <a class="btn-sm btn-outline-black" href="">Remove</a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                </table>
+            {% else %}
+                <p>{{ user }}, you have not created any unique experiences yet</p>
+            {% endif %}  
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<script>
+    let el = document.querySelector("#id_created_by > option:nth-child(1)")
+    el.remove();
+</script>
+{% endblock %}
