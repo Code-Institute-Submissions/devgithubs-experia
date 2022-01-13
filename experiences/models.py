@@ -1,5 +1,5 @@
 from django.db import models
-
+from profiles.models import UserProfile
 
 class ExperienceCategory(models.Model):
 
@@ -20,7 +20,9 @@ class Experiences(models.Model):
 
     class Meta:
         verbose_name_plural = 'Experiences'
-
+    
+    created_by = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
+                                     null=True, blank=True, related_name='creator')
     experience_category = models.ForeignKey(
         'ExperienceCategory', null=True, blank=True, on_delete=models.SET_NULL)
     name = models.CharField(max_length=254)
@@ -36,3 +38,6 @@ class Experiences(models.Model):
     
     def __str__(self):
         return self.name
+
+    def creator(self):
+        return self.created_by
