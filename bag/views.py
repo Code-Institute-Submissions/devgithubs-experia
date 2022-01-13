@@ -1,15 +1,16 @@
 from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from experiences.models import Experiences
 
-
+@login_required
 def view_bag(request):
     '''
     View to render the users bag
     '''
     return render(request, 'bag/bag.html')
 
-
+@login_required
 def add_to_bag(request, item_id):
     '''
     Function to add x number of 
@@ -30,7 +31,7 @@ def add_to_bag(request, item_id):
     request.session['bag'] = bag
     return redirect(redirect_url)
 
-
+@login_required
 def adjust_bag(request, item_id):
     '''
     Function to adjust number of 
@@ -49,7 +50,7 @@ def adjust_bag(request, item_id):
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
 
-
+@login_required
 def remove_from_bag(request, item_id):
     '''
     Function to remove number of 
