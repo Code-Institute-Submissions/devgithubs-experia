@@ -1,0 +1,222 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Your Cookie Settings</h5>
+        </div>
+        <div class="modal-body">
+            Experia asks you to accept cookies for performance purposes. 
+            To get more information or amend your preferences, click the ‘More Information’ 
+            button or visit 'Cookie Settings' at the bottom of the website.
+            To get more information about these cookies and the processing of your personal data,
+            check our Privacy & Cookie Policy. Do you accept these cookies and the processing of
+            personal data involved?
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Yes, continue</button>
+        </div>
+    </div>
+    </div>
+</div>
+
+<body>
+    <!-- Header-->
+    <header class="bg-dark py-5">
+        <div class="container px-5">
+            <div class="row gx-5 justify-content-center">
+                <div class="col-lg-6">
+                    <div class="text-center my-5">
+                        <h1 class="display-5 fw-bolder text-white mb-2">Experience new places in a new way</h1>
+                        <p class="lead text-white-50 mb-4">Experia opens up a whole world of unique experiences hosted by you!</p>
+                        <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+                            <a href="{% url 'experiences' %}" class="btn btn-outline-secondary text-bold"><span>Explore</span></a>
+                            <!-- <button type="button" class="btn btn-light m-1" href="">Learn More</a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Features section-->
+    <section class="py-5 border-bottom" id="features">
+        <div class="container px-5 my-5">
+            <div class="row gx-5 justify-content-center">
+                <div class="card-deck">
+                    <div class="card">
+                      <img class="card-img-top rounded-0" src="./media/REB.jpg" alt="Card image cap">
+                      <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-black lead">Learn</h5>
+                        <p class="card-text">Immerse yourself in Irish history and the struggle for independence.</p>
+                        <a href="{% url 'experiences' %}" class="btn btn-outline-secondary text-bold mt-auto"><span>Explore</span></a>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img class="card-img-top rounded-0" src="./media/BCT.jpg" alt="Card image cap">
+                      <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-black lead">Marvel</h5>
+                        <p class="card-text">Gaze at the world famous cliffs of Moher.</p>
+                        <a href="{% url 'experiences' %}" class="btn btn-outline-secondary text-bold mt-auto"><span>Explore</span></a>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img class="card-img-top rounded-0" src="./media/FSR.jpg" alt="Card image cap">
+                      <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-black lead">Make friends</h5>
+                        <p class="card-text">Learn how to make jewelry.</p>
+                        <button type="button" href="{% url 'experiences' %}" class="btn btn-outline-secondary text-bold mt-auto">Explore</button>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </section>
+    <!-- Pricing section-->
+    <section class="bg-light py-5 border-bottom">
+        <div class="container px-5 my-5">
+            <div class="row">
+                <div class="col">
+                    <div>
+                        <div>
+                            <div class="my-5">
+                                <h1 class="text-left display-7 fw-bolder text-black mb-2">Experia is commited to your experience</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <div>
+                            <div class="my-5">
+                                <h1 class="display-5 fw-bolder text-black mb-2"><i class="fas fa-award"></i></h1>
+                                <p class="lead text-black mb-1">High standards.</p>
+                                <p class="text-black-50 mb-4">We only offer high quality experiences.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <div>
+                            <div class="my-5">
+                                <h1 class="display-5 fw-bolder text-black mb-2"><i class="fas fa-users"></i></h1>
+                                <p class="lead text-black mb-1">Small groups.</p>
+                                <p class="text-black-50 mb-4">You get the personal treatment.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials section-->
+    <section class="py-5 border-bottom">
+        <div class="container px-5 my-5 px-5">
+            <div class="text-center mb-5">
+                <h2 class="fw-bolder">Customer testimonials</h2>
+                <p class="lead mb-0">Our customers love working with us</p>
+            </div>
+            <div class="row gx-5 justify-content-center">
+                <div class="col-lg-6">
+                    <!-- Testimonial 1-->
+                    <div class="card mb-4">
+                        <div class="card-body p-4">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0"><i class="bi bi-chat-right-quote-fill text-primary fs-1"></i></div>
+                                <div class="ms-4">
+                                    <p class="mb-1">Thank you for putting together such a great experience. We will be recommending you to others!</p>
+                                    <div class="small text-muted">- Jose Alvarez, Mexico</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 2-->
+                    <div class="card">
+                        <div class="card-body p-4">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0"><i class="bi bi-chat-right-quote-fill text-primary fs-1"></i></div>
+                                <div class="ms-4">
+                                    <p class="mb-1">The sheer variety of experiences means there's something for everyone. I highly recommend you check out Experia!</p>
+                                    <div class="small text-muted">- Amanda Lancaster, London</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact section-->
+    <section class="bg-light py-5">
+        <div class="container px-5 my-5 px-5">
+            <div class="text-center mb-5">
+                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-envelope"></i></div>
+                <h2 class="fw-bolder">Get in touch</h2>
+                <p class="lead mb-0">We'd love to hear from you</p>
+            </div>
+            <div class="row gx-5 justify-content-center">
+                <div class="col-lg-6">
+                    <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                        <!-- Name input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                            <label for="name">Full name</label>
+                            <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                        </div>
+                        <!-- Email address input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                            <label for="email">Email address</label>
+                            <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                            <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                        </div>
+                        <!-- Phone number input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
+                            <label for="phone">Phone number</label>
+                            <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                        </div>
+                        <!-- Message input-->
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+                            <label for="message">Message</label>
+                            <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                        </div>
+                        <!-- Submit Button-->
+                        <div class="d-grid"><button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer-->
+    <footer class="py-5 bg-dark">
+        <div class="container px-5"><p class="m-0 text-center text-white">Copyright &copy; Experia 2022</p></div>
+    </footer>
+</body>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<script type="text/javascript">
+ $(window).on('load', function() {
+     if (sessionStorage.getItem('modal') !== 'true') {
+         $('#exampleModalCenter').modal('show');
+         sessionStorage.setItem('modal','true');     
+    }
+});
+
+</script>
+{% endblock %}

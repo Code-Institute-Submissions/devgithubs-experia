@@ -5,4 +5,4 @@ class HomeView(TemplateView):
     '''
     Generic class view to display home page
     '''
-    template_name = "home/index.html"
+    template_name = "home/index-new.html"
