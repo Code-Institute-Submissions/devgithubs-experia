@@ -1,5 +1,5 @@
 from django import forms
-from .models import Experiences
+# from .models import Experiences
 from experiences.models import ExperienceCategory, Experiences
 
 
@@ -9,7 +9,6 @@ class PostExperienceForm(forms.ModelForm):
         '''define class metadata'''
         model = Experiences
         fields = '__all__'
-        # exclude = ('created_by',)
 
     def __init__(self, *args, **kwargs):
         """
