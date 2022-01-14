@@ -56,27 +56,27 @@
             <div class="row gx-5 justify-content-center">
                 <div class="card-deck">
                     <div class="card">
-                      <img class="card-img-top rounded-0" src="./media/REB.jpg" alt="Card image cap">
+                      <img class="card-img-top rounded-0" src="{{ MEDIA_URL }}REB.jpg" alt="rebel walk">
                       <div class="card-body d-flex flex-column">
                         <h5 class="card-title text-black lead">Learn with John</h5>
                         <p class="card-text">Immerse yourself in Irish history and the struggle for independence.</p>
-                        <a href="{% url 'experiences' %}" class="btn btn-outline-secondary text-bold mt-auto"><span>Explore</span></a>
+                        <a href="{% url 'experiences_detail' experience_id=18 %}" class="btn btn-outline-secondary text-bold mt-auto"><span>Explore</span></a>
                       </div>
                     </div>
                     <div class="card">
-                      <img class="card-img-top rounded-0" src="./media/BCT.jpg" alt="Card image cap">
+                      <img class="card-img-top rounded-0" src="{{ MEDIA_URL }}BCT.jpg" alt="cliffs of moher">
                       <div class="card-body d-flex flex-column">
                         <h5 class="card-title text-black lead">Marvel with Patricia</h5>
                         <p class="card-text">Gaze at the world famous cliffs of Moher.</p>
-                        <a href="{% url 'experiences' %}" class="btn btn-outline-secondary text-bold mt-auto"><span>Explore</span></a>
+                        <a href="{% url 'experiences_detail' experience_id=12 %}" class="btn btn-outline-secondary text-bold mt-auto"><span>Explore</span></a>
                       </div>
                     </div>
                     <div class="card">
-                      <img class="card-img-top rounded-0" src="./media/FSR.jpg" alt="Card image cap">
+                      <img class="card-img-top rounded-0" src="{{ MEDIA_URL }}FSR.jpg" alt="makeing jewelry">
                       <div class="card-body d-flex flex-column">
                         <h5 class="card-title text-black lead">Make friends with Alan & Jimmy</h5>
                         <p class="card-text">Learn how to make jewelry.</p>
-                        <button type="button" href="{% url 'experiences' %}" class="btn btn-outline-secondary text-bold mt-auto">Explore</button>
+                        <a href="{% url 'experiences_detail' experience_id=3 %}" class="btn btn-outline-secondary text-bold mt-auto"><span>Explore</span></a>
                       </div>
                     </div>
                   </div>
