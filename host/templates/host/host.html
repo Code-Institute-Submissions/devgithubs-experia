@@ -27,11 +27,11 @@
                 {% csrf_token %}
                 {{ experience_form|crispy }}
                 <br>
-                <button class="btn btn-black rounded-0 text-uppercase float-right" type="submit">Submit</button>
+                <button class="btn btn-black rounded-0 text-uppercase float-right mb-3" type="submit">Submit</button>
             </form>
         </div>
         <div class="col-12 col-lg-6">
-            <p class="text-muted">{{ user }}'s current Experiences</p>
+            <p class="text-muted">Your current Experiences</p>
             <hr>
             {% if created_experience.all %}
             <div class="table-responsive rounded">
@@ -80,16 +80,16 @@
                                 <p class="my-0">{{ created.location }}</p>
                             </td>
                             <td class="py-3 w-10">
-                                <a class="btn-sm btn-outline-black" href="">Edit</a>
+                                <a href="{% url 'update_experience' created.id %}" class="btn btn-outline-secondary btn-sm text-bold"><span>Edit</span></a>
                             </td>
                             <td class="py-3 w-10">
-                                <a class="btn-sm btn-outline-black" href="">Remove</a>
+                                <a href="{% url 'remove_experience' created.id %}" class="btn btn-outline-secondary btn-sm text-bold"><span>Remove</span></a>
                             </td>
                         </tr>
                         {% endfor %}
                 </table>
             {% else %}
-                <p>{{ user }}, you have not created any unique experiences yet</p>
+                <h3 class="text-grey">{{ user }}, you have not created any unique experiences yet</h3>
             {% endif %}  
             </div>
         </div>
