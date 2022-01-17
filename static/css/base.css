@@ -6,6 +6,14 @@ html {
     background-color: rgba(222, 224, 224, 0.986);
 }
 
+.modal-custom, .modal-dialog-custom, .modal-coupon, .modal-coupon-dialog {
+    width:20%;
+    position:fixed;
+    bottom:0;
+    right:0;
+    margin:0;
+ }
+
 body {
 
     height: calc(100vh - 164px);
