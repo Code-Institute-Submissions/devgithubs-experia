@@ -57,7 +57,7 @@
                                 <p class="my-0 small text-muted">Host: {{ i.product.hosted_by }}</p>
                             </td>
                             <td class="py-3">
-                                <p class="my-0">${{ i.product.price }}</p>
+                                <p class="my-0">€{{ i.product.price }}</p>
                             </td>
                             <td class="py-3 w-25">
                                 <form class="form update-form" method="POST" action="{% url 'adjust_bag' i.item_id %}">
@@ -91,14 +91,14 @@
                                 <a class="remove-item text-danger float-right" id="remove_{{ i.item_id }}"><small>Remove</small></a>
                             </td>
                             <td class="py-3">
-                                <p class="my-0">${{ i.product.price | calc_subtotal:i.quantity  }}</p>
+                                <p class="my-0">€{{ i.product.price | calc_subtotal:i.quantity  }}</p>
                             </td>
                         </tr>
                     {% endfor %}
                     <tr>
                         <td colspan="5" class="pt-5 text-right">
-                            <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
-                            <h4 class="mt-4"><strong>Grand Total: $</strong></h4>
+                            <h6><strong>Bag Total: €{{ total|floatformat:2 }}</strong></h6>
+                            <h4 class="mt-4"><strong>Grand Total: €</strong></h4>
 
                         </td>
                     </tr>
