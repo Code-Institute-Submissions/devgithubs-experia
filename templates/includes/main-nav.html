@@ -17,7 +17,7 @@
                 Host an experience
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="#" class="dropdown-item bg-secondary text-white">Host your own experience</a>
+                <a href="{% url 'host' %}" class="dropdown-item bg-secondary text-white">Host your own experience</a>
                 <a href="{% url 'experiences' %}?experience_category=art" class="dropdown-item">Art & Culture</a>
                 <a href="{% url 'experiences' %}?experience_category=fooddrink" class="dropdown-item">Food & Drink</a>
                 <a href="{% url 'experiences' %}?experience_category=nature" class="dropdown-item">Nature and outdoors</a>
