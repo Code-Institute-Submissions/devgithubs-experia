@@ -8,7 +8,7 @@ class PostExperienceForm(forms.ModelForm):
     class Meta:
         '''define class metadata'''
         model = Experiences
-        fields = '__all__'
+        exclude = ['created_by', 'rating']
 
     def __init__(self, *args, **kwargs):
         """
@@ -20,4 +20,3 @@ class PostExperienceForm(forms.ModelForm):
         friendly_names = [(c.id, c.get_friendly_name()) for c in categories]
 
         self.fields['experience_category'].choices = friendly_names
-        self.fields['created_by'].widget.attrs['readonly'] = True
