@@ -33,7 +33,7 @@ class Experiences(models.Model):
     age_restricted = models.BooleanField(default=False)
     language_default = models.BooleanField(default=False)
     image = models.ImageField(null=True, blank=True)
-    rating = models.DecimalField(max_digits=6, decimal_places=2, blank=True)
+    rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
     hosted_by = models.CharField(max_length=254)
     
     def __str__(self):
