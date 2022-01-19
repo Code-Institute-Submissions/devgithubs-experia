@@ -15,8 +15,8 @@
         <div class="row">
             <div class="col-12 col-md-6">
                 <hr>
-                <h2 class="logo-font mb-4"></h2>
-                <h5 class="text-muted">Edit a Experience</h5>
+                <h2 class="logo-font mb-4">Edit Experience: '{{ experience.name }}'</h2>
+                <h5 class="text-muted">Make changes to your experience below</h5>
                 <hr>
             </div>
         </div>
@@ -25,7 +25,18 @@
             <div class="col-12 col-md-6">
                 <form method="POST" action="{% url 'update_experience' experience.id %}" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
-                    {{ form | crispy }}
+                    <fieldset class="rounded px-3 mb-5">
+                        {{ form.name | as_crispy_field }}
+                        {{ form.description | as_crispy_field }}
+                        {{ form.experience_category | as_crispy_field }}
+                        {{ form.location | as_crispy_field }}
+                        {{ form.price | as_crispy_field }}
+                        {{ form.duration | as_crispy_field }}
+                        {{ form.age_restricted | as_crispy_field }}
+                        {{ form.language_default | as_crispy_field }}
+                        {{ form.image | as_crispy_field }}
+                        {{ form.hosted_by | as_crispy_field }}
+                    </fieldset>
                     <div class="text-right">
                         <a class="btn btn-outline-black rounded-0" href="{% url 'experiences' %}">Cancel</a>
                         <button class="btn btn-black rounded-0" type="submit">Update experience</button>
