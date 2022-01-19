@@ -35,7 +35,7 @@
 
     <title>Experia {% block extra_title %}{% endblock %}</title>
   </head>
-  <body>
+  <body class="d-flex flex-column min-vh-100">
 
     <header class="container-fluid fixed-top">
       <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
@@ -125,6 +125,120 @@
     {% endblock %}
 
     {% block content %}
+    {% endblock %}
+
+    {% block footer_content %}
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-light text-muted pt-2">
+    <!-- Section: Social media -->
+
+    <!-- Section: Social media -->
+  
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              <i class="fas fa-user-astronaut me-3"></i> Experia
+            </h6>
+            <p>
+              The unique experience people!
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Experiences
+            </h6>
+            <p>
+              <a href="{% url 'experiences' %}?experience_category=sport" class="text-reset">Sports</a>
+            </p>
+            <p>
+              <a href="{% url 'experiences' %}?experience_category=sights" class="text-reset">Sightseeing</a>
+            </p>
+            <p>
+              <a href="{% url 'experiences' %}?experience_category=nature" class="text-reset">Nature & Outdoors</a>
+            </p>
+            <p>
+              <a href="{% url 'experiences' %}?experience_category=fooddrink" class="text-reset">Food & Drink</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Useful links
+            </h6>
+            <p>
+              <a href="{% url 'help' %}" class="text-reset">Experiences</a>
+            </p>
+            <p>
+              <a href="{% url 'contact-us' %}" class="text-reset">Contact us</a>
+            </p>
+            <p>
+              <a href="{% url 'account_login' %}" class="text-reset">Account</a>
+            </p>
+            <p>
+              <a href="{% url 'help' %}" class="text-reset">Help</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Contact
+            </h6>
+            <p><i class="fas fa-home me-3"></i> Dublin, 1 Molesworth Pl, Dublin 2, D02 WE52</p>
+            <p>
+              <i class="fas fa-envelope me-3"></i>
+              info@experia.com
+            </p>
+            <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+            <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+        <a href="https://www.facebook.com/" target="_blank" class="m-3 text-reset">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://twitter.com/?lang=en" target="_blank" class="m-3 text-reset">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://discord.com/" target="_blank" class="m-3 text-reset">
+            <i class="fab fa-discord"></i>
+        </a>
+      © 2022
+        <a class="text-reset fw-bold" href="{% url 'home' %}">Experia.com</a>
+        <a href="https://www.instagram.com/?hl=en" target="_blank" class="m-3 text-reset">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/" target="_blank" class="m-3 text-reset">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/" target="_blank" class="m-3 text-reset">
+            <i class="fab fa-github"></i>
+        </a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
     {% endblock %}
 
     {% block postloadjs %}
