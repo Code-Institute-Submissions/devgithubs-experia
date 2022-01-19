@@ -1,11 +1,8 @@
-from django.shortcuts import render, reverse, redirect, get_object_or_404, HttpResponse
+from django.shortcuts import render, reverse, redirect, get_object_or_404
 from django.contrib import messages
-
 from experiences.models import Experiences
-
 from django.views.generic import TemplateView
 from .forms import PostExperienceForm
-
 from profiles.models import UserProfile
 
 
@@ -18,10 +15,10 @@ def update_experience(request, item_id):
             messages.success(request, 'Successfully updated experience!')
             return redirect(reverse('experiences_detail', args=[experience.id]))
         else:
-            messages.error(request, 'Failed to update experience. Please ensure the form is valid.')
+            messages.error(request, 'Failed to update experience. Please ensuren\
+                           the form is valid.')
     else:
         form = PostExperienceForm(instance=experience)
-        messages.info(request, f'You are editing {experience.name}')
 
     template = 'host/update_experience.html'
     context = {
@@ -58,7 +55,20 @@ class PostExperienceView(TemplateView):
 
     def post(self, request):
 
-        form = PostExperienceForm(request.POST, request.FILES)
+        form_data = {
+            'name': 'Experience name',
+            'description': 'Description',
+            'experience_category': 'Category',
+            'location': 'Location',
+            'price': 'Price',
+            'duration': 'Duation (mins)',
+            'age_restricted': 'Suitable for ages under 18?',
+            'language_default': 'English?',
+            'image': 'Image',
+            'hosted_by': 'Host name',
+        }
+
+        form = PostExperienceForm(request.POST, request.FILES, form_data)
         if form.is_valid():
             post = form.save(commit=False)
             user = get_object_or_404(UserProfile, user=request.user)
@@ -70,7 +80,8 @@ class PostExperienceView(TemplateView):
             return redirect(reverse('host'))
         else:
             form = PostExperienceForm()
-            messages.error(request, 'Failed to add experience. Please ensure the form is valid.')
+            messages.error(request, 'Failed to add experience. Please ensuren\
+                           the form is valid.')
 
         context = {'experience_form': form}
         return render(request, self.template_name, context)
