@@ -15,7 +15,6 @@ html {
  }
 
 body {
-
     height: calc(100vh - 164px);
     color: rgb(65, 64, 64);
     font-family: 'Lato';
