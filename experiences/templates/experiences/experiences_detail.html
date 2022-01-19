@@ -25,6 +25,88 @@
                         </a>
                     {% endif %}
                 </div>
+                <hr>
+                <div class="mb-3">
+                    <h2 class="logo-font mb-6">reviews
+                       
+                        <a href="{% url 'add_review' experience.id %}" data-toggle="modal" data-target="#addReviewModal" class="btn btn-outline-secondary btn-sm text-bold float-right m-2"><span>Add</span></a>
+                    </h2>
+                    <h5 class="text-muted">See what others think of this experience</h5>
+                    <hr>
+                </div>
+                <div class="container-md mb-3">
+                {% for review in experience.reviews.all %}
+                    <div class="card review-container mt-2">
+                        <!-- Give edit/delete functionality to the review creator or admin-->
+                        {% if review.user == request.user or request.user.is_superuser %}
+                            <div class="card-head">
+                                <a href="" data-toggle="modal" data-target="#modal1-{{review.id}}" class="btn btn-outline-secondary btn-sm text-bold float-right m-2"><span>Edit</span></a>
+                                <a href="{% url 'delete_review' review.id %}" class="btn btn-outline-secondary btn-sm text-bold float-right mt-2"><span>Remove</span></a>
+                            </div>
+                        {% endif %}
+                        <div class="card-body">
+                            <p class="small text-muted"> by {{ review.user }} on {{ review.created_on }}</p>    
+                            <p class="card-text lead">{{ review.review_text }}</p>
+                            <p class="card-text lead">{{ review.review_rating }}/5&#11088;</p>
+                        </div>
+                    </div>
+                    <div class="modal" tabindex="-1" role="dialog" id="modal1-{{review.id}}">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">{{ experience.name }}</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form method="POST" action="{% url 'edit_review' review.id %}" class="form mb-2" enctype="multipart/form-data">
+                                    {% csrf_token %}
+                                    <fieldset class="rounded px-3 mb-5">
+                                        <input type="text" value="{{ review.review_text }}" name="review_text"/>
+                                    </fieldset>  
+                                    <fieldset class="rounded px-3 mb-5">
+                                        <input type="text" value="{{ review.review_rating }}" name="review_rating"/>
+                                    </fieldset>
+                                    <button class="btn btn-black rounded-0 text-uppercase float-right mb-3" type="submit">Submit</button>
+                                </form>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                {% empty %}
+                    <div class="text-center mt-5">
+                        <p class="text-muted">No reviews for this experience yet....</p>
+                    </div>
+                {% endfor %}
+                </div>
+                
+                <hr>
+                <!--Experience review-->
+                <div class="modal" tabindex="-1" role="dialog" id="addReviewModal">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">{{ experience.name }}</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form method="POST" action="{% url 'add_review' experience.id %}" class="form mb-2" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                <fieldset class="rounded px-3 mb-5">
+                                    {{ form | crispy }}
+                                </fieldset>
+                                <button class="btn btn-black rounded-0 text-uppercase float-right mb-3" type="submit">Submit</button>
+                            </form>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End Experience review-->
+
+
             </div>
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="product-details-container mb-5 mt-md-5">
@@ -77,7 +159,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="col-12">
                                 <a href="{% url 'experiences' %}" class="btn btn-outline-black rounded-0 mt-5">
                                     <span class="icon">
