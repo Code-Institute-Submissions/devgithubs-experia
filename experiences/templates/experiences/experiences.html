@@ -57,11 +57,11 @@
                             <div class="heart card h-100 border-0">
                                 {% if experience.image %}
                                 <a href="{% url 'experiences_detail' experience.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ experience.image.url }}" alt="{{ experience.name }}">
+                                    <img class="card-img-top-cust card-img-top img-fluid" src="{{ experience.image.url }}" alt="{{ experience.name }}">
                                 </a>
                                 {% else %}
                                 <a href="{% url 'experiences_detail' experience.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ experience.name }}">
+                                    <img class="card-img-top-cust card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ experience.name }}">
                                 </a>
                                 {% endif %}
                                 <div class="card-body pb-0">

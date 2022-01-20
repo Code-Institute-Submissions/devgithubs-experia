@@ -17,19 +17,18 @@
                 <div class="image-container my-5">
                     {% if experience.image %}
                         <a href="{{ experience.image.url }}" target="_blank">
-                            <img class="card-img-top img-fluid" src="{{ experience.image.url }}" alt="{{ experience.name }}">
+                            <img class="card-img-top-cust card-img-top img-fluid" src="{{ experience.image.url }}" alt="{{ experience.name }}">
                         </a>
                         {% else %}
                         <a href="">
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ experience.name }}">
+                            <img class="card-img-top-cust card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ experience.name }}">
                         </a>
                     {% endif %}
                 </div>
                 <hr>
                 <div class="mb-3">
                     <h2 class="logo-font mb-6">reviews
-                       
-                        <a href="{% url 'add_review' experience.id %}" data-toggle="modal" data-target="#addReviewModal" class="btn btn-outline-secondary btn-sm text-bold float-right m-2"><span>Add</span></a>
+                        <a href="{% url 'add_review' experience.id %}" data-toggle="modal" data-target="#addReviewModal" class="btn btn-outline-warning btn-sm text-bold m-2"><span>Add</span></a>
                     </h2>
                     <h5 class="text-muted">See what others think of this experience</h5>
                     <hr>
@@ -63,10 +62,12 @@
                                 <form method="POST" action="{% url 'edit_review' review.id %}" class="form mb-2" enctype="multipart/form-data">
                                     {% csrf_token %}
                                     <fieldset class="rounded px-3 mb-5">
-                                        <input type="text" value="{{ review.review_text }}" name="review_text"/>
+                                        <input type="text" id="review-text" value="{{ review.review_text }}" name="review_text"/>
+                                        <label for="review-text">Review</label>
                                     </fieldset>  
                                     <fieldset class="rounded px-3 mb-5">
-                                        <input type="text" value="{{ review.review_rating }}" name="review_rating"/>
+                                        <input type="text" id="review-rating" value="{{ review.review_rating }}" name="review_rating"/>
+                                        <label for="review-rating">Rating /5</label>
                                     </fieldset>
                                     <button class="btn btn-black rounded-0 text-uppercase float-right mb-3" type="submit">Submit</button>
                                 </form>
