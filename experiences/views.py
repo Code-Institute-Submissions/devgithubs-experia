@@ -35,7 +35,8 @@ def all_experiences(request):
 
         if 'experience_category' in request.GET:
             categories = request.GET['experience_category'].split(',')
-            experiences = experiences.filter(experience_category__name__in=categories)
+            experiences = experiences.filter(
+                experience_category__name__in=categories)
             categories = ExperienceCategory.objects.filter(name__in=categories)
 
         if 'q' in request.GET:
@@ -45,7 +46,8 @@ def all_experiences(request):
                                ")
                 return redirect(reverse('experiences'))
 
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = \
+                Q(name__icontains=query) | Q(description__icontains=query)
             experiences = experiences.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
@@ -65,7 +67,6 @@ def experiences_detail(request, experience_id):
     experience = get_object_or_404(Experiences, pk=experience_id)
     form = ReviewAdd
     reviews = experience.reviews.filter()
-    print(reviews)
 
     context = {
         'experience': experience,
@@ -79,7 +80,6 @@ def experiences_detail(request, experience_id):
 def all_reviews(request):
     """ A view to render all reviews """
     reviews = ExperienceReview.objects.all()
-    print(f'any reviews: {reviews}')
     form = ReviewAdd()
 
     context = {'reviews': reviews, 'review_form': form}

@@ -1,7 +1,10 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
+from django.shortcuts import (
+    render, redirect, reverse, HttpResponse, get_object_or_404
+)
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from experiences.models import Experiences
+
 
 @login_required
 def view_bag(request):
@@ -10,10 +13,11 @@ def view_bag(request):
     '''
     return render(request, 'bag/bag.html')
 
+
 @login_required
 def add_to_bag(request, item_id):
     '''
-    Function to add x number of 
+    Function to add x number of
     experiences to the checkout bag
     '''
     experience = get_object_or_404(Experiences, pk=item_id)
@@ -23,7 +27,8 @@ def add_to_bag(request, item_id):
 
     if item_id in list(bag.keys()):
         bag[item_id] += quantity
-        messages.success(request, f'Updated {experience.name} quantity to {bag[item_id]}')
+        messages.success(request, f'Updated {experience.name} n\
+                         quantity to {bag[item_id]}')
     else:
         bag[item_id] = quantity
         messages.success(request, f'Added {experience.name} to your bag')
@@ -31,10 +36,11 @@ def add_to_bag(request, item_id):
     request.session['bag'] = bag
     return redirect(redirect_url)
 
+
 @login_required
 def adjust_bag(request, item_id):
     '''
-    Function to adjust number of 
+    Function to adjust number of
     experiences in the checkout bag
     '''
     experience = get_object_or_404(Experiences, pk=item_id)
@@ -43,17 +49,19 @@ def adjust_bag(request, item_id):
 
     if quantity > 0:
         bag[item_id] = quantity
-        messages.success(request, f'Updated {experience.name} quantity to {bag[item_id]}')
+        messages.success(request, f'Updated {experience.name} n\
+                         quantity to {bag[item_id]}')
     else:
         bag.pop(item_id)
         messages.success(request, f'Removed {experience.name} from your bag')
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
 
+
 @login_required
 def remove_from_bag(request, item_id):
     '''
-    Function to remove number of 
+    Function to remove number of
     experiences in the checkout bag
     '''
     try:
@@ -64,7 +72,7 @@ def remove_from_bag(request, item_id):
 
         request.session['bag'] = bag
         return HttpResponse(status=200)
-        
+
     except Exception as e:
         messages.error(request, f'Error removing item: {e}')
         return HttpResponse(status=500)

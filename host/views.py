@@ -9,13 +9,15 @@ from profiles.models import UserProfile
 def update_experience(request, item_id):
     experience = get_object_or_404(Experiences, pk=item_id)
     if request.method == 'POST':
-        form = PostExperienceForm(request.POST, request.FILES, instance=experience)
+        form = PostExperienceForm(request.POST, request.FILES,
+                                  instance=experience)
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully updated experience!')
-            return redirect(reverse('experiences_detail', args=[experience.id]))
+            return redirect(reverse('experiences_detail',
+                            args=[experience.id]))
         else:
-            messages.error(request, 'Failed to update experience. Please ensuren\
+            messages.error(request, 'Failed to update experience. Please ensure\
                            the form is valid.')
     else:
         form = PostExperienceForm(instance=experience)
@@ -49,7 +51,10 @@ class PostExperienceView(TemplateView):
         form = PostExperienceForm()
 
         created_experience = user_experience.creator.all()
-        context = {'experience_form': form, 'created_experience': created_experience}
+        context = {
+            'experience_form': form,
+            'created_experience': created_experience
+        }
 
         return render(request, self.template_name, context)
 

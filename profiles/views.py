@@ -1,8 +1,7 @@
-from django.shortcuts import render, reverse, redirect, get_object_or_404
+from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
 
 from .models import UserProfile
-from experiences.models import Experiences
 from .forms import UserProfileForm
 
 from checkout.models import Order
@@ -20,8 +19,9 @@ def profile(request):
             form.save()
             messages.success(request, 'Profile updated successfully')
         else:
-            messages.error(request, 'Update failed. Please ensure the form is correct')
-    else: 
+            messages.error(request, 'Update failed. \
+                Please ensure the form is correct')
+    else:
         form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
     print(f'order list: {orders}')

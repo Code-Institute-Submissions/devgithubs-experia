@@ -1,6 +1,5 @@
 from django.shortcuts import render, reverse, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
-from profiles.models import UserProfile
 from experiences.models import Experiences
 
 from django.contrib import messages
@@ -24,9 +23,6 @@ def wishlist(request):
 
     return render(request, 'wishlist/wishlist.html', context)
 
-    def __len__(self):
-        """ count all the items in the favourites"""
-        return sum(item['quantity'] for item in self.wishlist.values())
 
 @login_required
 def add_to_wishlist(request, item_id):
@@ -43,7 +39,8 @@ def add_to_wishlist(request, item_id):
     messages.info(request, f'{experience.name} was added to your wishlist')
 
     return redirect(redirect_url)
-    
+
+
 @login_required
 def remove_from_wishlist(request, item_id):
     """

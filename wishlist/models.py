@@ -21,13 +21,13 @@ class WishlistItem(models.Model):
     """
 
     experience = models.ForeignKey(Experiences,
-                                null=False,
-                                blank=False,
-                                on_delete=models.CASCADE)
+                                   null=False,
+                                   blank=False,
+                                   on_delete=models.CASCADE)
     wish = models.ForeignKey(Wishlist,
-                                  null=False,
-                                  blank=False,
-                                  on_delete=models.CASCADE)
+                             null=False,
+                             blank=False,
+                             on_delete=models.CASCADE)
 
     def __str__(self):
         return self.wish.name
