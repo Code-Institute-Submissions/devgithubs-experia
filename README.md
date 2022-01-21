@@ -252,7 +252,7 @@ The primary attributes of the default user are:
 
 - Template: `index-new.html`
 - This is the landing page of the website, it is laid out in a modern and intuitive way, the user is greeted with a banner message and call to action button to explore, the user is encouraged to scroll further down to
-the 'Meet your host' section which has links directly to those experiences. Below that again is another container highlighting the commitment to quality. Finally below that are customer testimonials, a contact us form and the footer rich with useful links. 
+the 'Meet your host' section which has links directly to those experiences. Below that again is another container highlighting the commitment to quality. Finally below that are customer testimonials, a contact us form and the footer rich with useful links. This page also features a Modal that pops up on page load to inform the user of the sites cookie policy, when the user accepts, it stores a boolean variable in session and the cookie pop up will not appear again. 
 
 #### Experiences
 
@@ -271,6 +271,28 @@ the 'Meet your host' section which has links directly to those experiences. Belo
 - `checkout.html` shows the last step in the sales cycle for the user, on the left they have in input form where they enter their personal details and card number. On the right,
 they are shown an order summary of the experinces they are buying and the cost. 
 - `checkout_success.html` Onve the order has completed they are directed to this page where they are informed that their order is complete and will receive an email confirming it.
+
+#### Help
+
+- Template: `help.html` and `contact-us.html`
+- `help.html` shows the sites general terms and conditions, a user can also be guided here if they click on the link from the landing page cookie policy.
+- `contact-us.html` features a contact, address with Google map iframe, and general FAQ accordion section.
+
+#### Host
+
+- Template: `host.html` and `update_experience.html`
+- `host.html` on the left features a form connected to the Experiences model that allows the user to create their own unique experience. On the right, shows the experiences the user has created and allows them to manage these experiences with update or delete features.
+- `update_experience.html` a user is brought here when they select the edit button on their specific experience. It shows a prepopulated form with the existing data, the user can adjust any part of the experience and save to update the experience. 
+
+#### Profiles
+
+- Template: `profile.html`
+- This page shows the users default information that has been stored from any previous purchases (if selected), on the right they also have an order history list. 
+
+#### Wishlist
+
+- Template: `wishlist.html`
+- This page shows a detailed description of the user's saved wishlist items. They can remove these by simply clicking the remove button.
 
 
 ### Design
