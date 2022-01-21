@@ -15,7 +15,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
         <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Your Cookie Settings</h5>
+        <h5 class="modal-title" id="exampleModalCenterTitle">Your Cookie Settings</h5>
         </div>
         <div class="modal-body">
             Experia asks you to accept cookies for performance purposes.
@@ -30,7 +30,7 @@
     </div>
 </div>
 
-<body>
+
     <!-- Header-->
     <header class="bg-light py-5">
         <div class="container px-5">
@@ -191,7 +191,7 @@
                         </div>
                         <!-- Message input-->
                         <div class="form-floating mb-3">
-                            <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+                            <textarea class="form-control" id="message" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
 
                             <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
                         </div>
@@ -206,7 +206,7 @@
         <div class="modal-dialog modal-dialog-custom">
             <div class="modal-content">
                 <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <button type="button" class="close" id="trackModalLabel" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <p>Thanks for your email!</p>
                 </div>
             </div>
@@ -217,7 +217,7 @@
             <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
         </a>	
     </div>
-</body>
+
 {% endblock %}
 
 {% block postloadjs %}
