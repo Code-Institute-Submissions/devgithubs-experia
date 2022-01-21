@@ -131,7 +131,7 @@ body {
   }
 
   .heart {
-    display: relative;
+    position: relative;
   }
 
   .card-img-top {
