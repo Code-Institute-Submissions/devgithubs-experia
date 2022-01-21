@@ -306,11 +306,64 @@ they are shown an order summary of the experinces they are buying and the cost.
     -   Imagery is an essential and expected part of any modern website. They help draw the user in and help them make decisions faster.
 -   #### Iconography
     - There has been a lot of consideration to the use of icons throughout the website. Since the idea stage the theme of the site has been about exploration hence the reason for the Astronaut icon used throughout.
+    - The heart icon has also been used extensively, as a website user this is generally known to be a way of liking or favouriting something. This is the reason it was chosen as the way to add an experience to the users wishlist. 
 
 ### Features
 
 -   Responsive on all device sizes
 -   Interactive elements
+
+## Technologies Used
+
+### Languages Used
+
+- [HTML5](https://html.com/html5/)
+- [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [Python](https://www.python.org/)
+
+#### Frameworks and Libraries
+- [Django](https://www.djangoproject.com/) - Used as the main framework for this site.
+- [Google Fonts](https://fonts.google.com/) - Used for the typography of the site.
+- [Font Awesome](https://fontawesome.com/) - Used for the icons of the site.
+- [Bootstrap](https://getbootstrap.com/) - Used for the styling of the site.
+- [jQuery](https://jquery.com/) - Used instead of vanilla JS.
+
+#### Database
+- [SQLite](https://www.sqlite.org/) - Used for the development database of the site.
+- [PostgreSQL](https://www.postgresql.org/) - Used for the Deployed database of the site on Heroku.
+
+#### Cloud service
+- [Heroku](https://www.heroku.com/) - Used for the deployment of the site.
+- [AWS](https://aws.amazon.com/) - S3 bucket used for hosting media images and static files.
+
+#### Version control
+- [Git](https://git-scm.com/) - Used for the version control of the site.
+- [GitHub](https://github.com/) - Repository for storing the project files.
+
+#### IDE
+- [Gitpod](https://gitpod.io/) - IDE used for the development of the site.
+- [VS Code](https://code.visualstudio.com/) - IDE used for the development of the site.
+
+#### Wireframing + Designing
+- [Balsamiq](https://www.balsamiq.com/) - Used for the wireframes.
+- [Google Sheets](https://www.balsamiq.com/) - Used for designing user stories and database.
+- [Table markdown](https://www.tablesgenerator.com/) - Used for presenting database tables.
+
+#### Testing
+- [Lighthouse](https://developers.google.com/web/tools/lighthouse) - Tool for measuring the quality of web pages.
+- [PEP8 Markup Validator](http://pep8online.com/) Python PEP8 validator
+- [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) CSS validator
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) HTML validator
+
+
+## Testing
+
+Test documents can be found [**here!**](TESTING.md)
+
+
+
+## Deployment
 
 
 
