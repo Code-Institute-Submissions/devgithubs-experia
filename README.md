@@ -370,21 +370,37 @@ Secondly, configuration of an Amazon Web Services (AWS) S3 bucket to store the s
 
 #### Heroku 
 
-    1. Navigate to Heroku website.
-    2. Create or login to existing account.
-    3. Create a new app with unique, relevant name.
-    4. Choose the region closest to you geographically and click 'Create app'.
-    5. When created, click on "Resources" tab to add the PostgreSQL database. Type in "Heroku Postgres" and select it This will create a DATABASE_URL variable in the config vars (in settings).
-    - [Enable automatic deployments]
-    6. Click on 'Deployment' tab.
-    7. Click the option for 'GitHub' and search for the project repository.
-    8. Click on the option for enabling automatic deployments.
-    - [Install DB config packages]
-    9. In the IDE `pip install dj_database_url` and `psycopg2-binary` to configure the PostgreSQL database.
-    10. In settings.py add the bellow:
+1. Navigate to Heroku website.
+1. Create or login to existing account.
+1. Create a new app with unique, relevant name.
+1. Choose the region closest to you geographically and click 'Create app'.
+1. When created, click on "Resources" tab to add the PostgreSQL database. Type in "Heroku Postgres" and select it This will create a DATABASE_URL variable in the config vars in settings.
+- [Enable automatic deployments]
+1. Click on 'Deployment' tab.
+1. Click the option for 'GitHub' and search for the project repository.
+1. Click on the option for enabling automatic deployments.
+- [Install DB config packages]
+1. In the IDE `pip install dj_database_url` and `psycopg2-binary` to configure the PostgreSQL database.
+1. In settings.py add: 
     `DATABASES = {
     "default": dj_database_url.parse("database_url")
 }`
+1. Comment-out the existing SQLite3 database.
+1. Access Heroku via the Heroku CLI `heroku login -i`
+1. Migrate models, fixtures etc to the Postgres database.
+1. Run:
+    - heroku run python manage.py makemigrations --dry-run
+    - heroku run python manage.py makemigrations
+    - heroku run python manage.py migrate --plan
+    - heroku run python manage.py migrate
+1. Install the gunicorn package by typing `pip install gunicorn`
+1. Freeze the requirements file by typing `pip3 freeze > requirements.txt`
+1. Create a project level `Procfile` in the CLI `touch Procfile`
+
+
+#### AWS S3
+
+### Setting up an AWS S3 bucket
 
 
 
