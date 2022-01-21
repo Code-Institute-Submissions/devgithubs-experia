@@ -359,11 +359,32 @@ they are shown an order summary of the experinces they are buying and the cost.
 
 ## Testing
 
-Test documents can be found [**here!**](TESTING.md)
+Testing documents can be found [**here!**](TESTING.md)
 
 
 
 ## Deployment
+
+The deployment of the website was a two stage process, first part was hooking up the project to Heroku which enables developers to build, run, and operate applications entirely in the cloud.
+Secondly, configuration of an Amazon Web Services (AWS) S3 bucket to store the static and image media files.
+
+#### Heroku 
+
+    1. Navigate to Heroku website.
+    2. Create or login to existing account.
+    3. Create a new app with unique, relevant name.
+    4. Choose the region closest to you geographically and click 'Create app'.
+    5. When created, click on "Resources" tab to add the PostgreSQL database. Type in "Heroku Postgres" and select it This will create a DATABASE_URL variable in the config vars (in settings).
+    - [Enable automatic deployments]
+    6. Click on 'Deployment' tab.
+    7. Click the option for 'GitHub' and search for the project repository.
+    8. Click on the option for enabling automatic deployments.
+    - [Install DB config packages]
+    9. In the IDE `pip install dj_database_url` and `psycopg2-binary` to configure the PostgreSQL database.
+    10. In settings.py add the bellow:
+    `DATABASES = {
+    "default": dj_database_url.parse("database_url")
+}`
 
 
 
