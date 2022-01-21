@@ -102,7 +102,7 @@ This project, where possible makes use of DRY (Dont repeat yourself) principles 
 The core static (HTML, CSS) files `Base.html` and `Base.css` include the `main-nav.html` and `mobile-top-header.html` of which, all other HTML pages on the website inherit from with the use of extended block content.
 The nature of Django's app components allows functionality to be tagged on in stages, this separation also makes for a cleaner and more readable development process. 
 
-## Database design schema
+## Database backend design schema
 
 This project makes use of a number of database tables or 'Models' as they are called in Django.
 Django supports various databases, for this project the database chosen while in development was SQLite. When the project was deployed to Heroku the database was migrated and provisioned to PostgreSQL.
@@ -213,7 +213,7 @@ The primary attributes of the default user are:
 
 - Path: /profiles
 - Models: `UserProfile`
-- `UserProfile` stores the users profile details 
+- `UserProfile` stores the users profile billing details. 
 
 | UserProfile (id)        | PK                  |
 |-------------------------|---------------------|
@@ -231,6 +231,9 @@ The primary attributes of the default user are:
 
 - Path: /wishlist
 - Models: `Wishlist` and `WishlistItem`
+- `Wishlist` Model to show all product items within the users wishlist.
+- `WishlistItem` A 'through' model allowing users to add
+    individual products to their favourites.
 
 | Wishlist(id) | PK                           |
 |--------------|------------------------------|
@@ -243,7 +246,44 @@ The primary attributes of the default user are:
 | wish             | FK(Wishlist)    |
 
 
+## Presentation frontend structure
 
+#### Home
+
+- Template: `index-new.html`
+- This is the landing page of the website, 
+
+
+
+
+### Design
+-   #### Colour Scheme
+    -   The two main colours used are Code Insititue red, and white.
+-   #### Typography
+    -   The Montserrat font is the main font used throughout the whole website with Sans Serif as the fallback font in case for any reason the font isn't being imported into the site correctly. Montserrat is a clean font used frequently in programming, so it is both attractive and appropriate.
+-   #### Imagery
+    -   Imagery is important.
+
+
+### Wireframes
+
+    -   Home Page Wireframe - [View](https://github.com/)
+
+    -   Mobile Wireframe - [View](https://github.com/)
+
+    -   Contact Us Page Wireframe - [View](https://github.com/)
+
+
+## Features
+
+-   Responsive on all device sizes
+-   Interactive elements
+
+
+<script src="https://gist.github.com/devgithubs/1eab1bd7d941dbe7461e2bf06aff673f.js">Google Lighthouse report: Mobile</script>
+
+
+<script src="https://gist.github.com/devgithubs/7916dd2aa8539d3d4be3b8469840f200.js">Google Lighthouse report: Desktop</script>
 
 
 | HTML                 |   | PEP8       |   | CSS            |   |
