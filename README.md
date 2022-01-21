@@ -251,9 +251,26 @@ The primary attributes of the default user are:
 #### Home
 
 - Template: `index-new.html`
-- This is the landing page of the website, 
+- This is the landing page of the website, it is laid out in a modern and intuitive way, the user is greeted with a banner message and call to action button to explore, the user is encouraged to scroll further down to
+the 'Meet your host' section which has links directly to those experiences. Below that again is another container highlighting the commitment to quality. Finally below that are customer testimonials, a contact us form and the footer rich with useful links. 
 
+#### Experiences
 
+- Template: `experiences.html` and `experiences_detail.html`
+- `experiences.html` shows the entire collection of experiences available to view and purchase. There is a dropdown in the top right of the screen to filter experiences by various criteria. On each experience card image there is a heart that allows an account user to quick add an experience to their wishlist. 
+- `experiences_detail.html` shows a more detailed page of the individual experience, from here the user has a host of options, they can add a review and rating of the experience, they can add it to their wishlist, or they can select how many guests they would like to attend the experince and select the add to bag option.
+
+#### Bag
+
+- Template: `bag.html`
+- `bag.html` shows the customers session stored items for purchase, here they can view, amend or delete items before proceeding to checkout.
+
+#### Checkout
+
+- Template: `checkout.html` and `checkout_success.html`
+- `checkout.html` shows the last step in the sales cycle for the user, on the left they have in input form where they enter their personal details and card number. On the right,
+they are shown an order summary of the experinces they are buying and the cost. 
+- `checkout_success.html` Onve the order has completed they are directed to this page where they are informed that their order is complete and will receive an email confirming it.
 
 
 ### Design
@@ -280,10 +297,10 @@ The primary attributes of the default user are:
 -   Interactive elements
 
 
-<script src="https://gist.github.com/devgithubs/1eab1bd7d941dbe7461e2bf06aff673f.js">Google Lighthouse report: Mobile</script>
+<script src="https://gist.github.com/devgithubs/1eab1bd7d941dbe7461e2bf06aff673f.js"></script>
 
 
-<script src="https://gist.github.com/devgithubs/7916dd2aa8539d3d4be3b8469840f200.js">Google Lighthouse report: Desktop</script>
+<script src="https://gist.github.com/devgithubs/7916dd2aa8539d3d4be3b8469840f200.js"></script>
 
 
 | HTML                 |   | PEP8       |   | CSS            |   |
