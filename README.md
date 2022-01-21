@@ -295,13 +295,23 @@ they are shown an order summary of the experinces they are buying and the cost.
 - This page shows a detailed description of the user's saved wishlist items. They can remove these by simply clicking the remove button.
 
 
-### Design
+## Surface Design
 -   #### Colour Scheme
-    -   The two main colours used are Code Insititue red, and white.
+    -   The two main colours used white and slate grey. I believe they give the cleanest appearance and make the important details standout easily to the user.
+    - rgb(65, 64, 64);
 -   #### Typography
-    -   The Montserrat font is the main font used throughout the whole website with Sans Serif as the fallback font in case for any reason the font isn't being imported into the site correctly. Montserrat is a clean font used frequently in programming, so it is both attractive and appropriate.
+    -   The Lato font family imported from Google fonts is the main font used throughout the website with Sans Serif as the default fallback. Lato is a clean, clear font that 
+    is easy to readon all viewports.
 -   #### Imagery
-    -   Imagery is important.
+    -   Imagery is an essential and expected part of any modern website. They help draw the user in and help them make decisions faster.
+-   #### Iconography
+    - There has been a lot of consideration to the use of icons throughout the website. Since the idea stage the theme of the site has been about exploration hence the reason for the Astronaut icon used throughout.
+
+### Features
+
+-   Responsive on all device sizes
+-   Interactive elements
+
 
 
 ### Wireframes
