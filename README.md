@@ -397,6 +397,21 @@ Secondly, configuration of an Amazon Web Services (AWS) S3 bucket to store the s
 1. Freeze the requirements file by typing `pip3 freeze > requirements.txt`
 1. Create a project level `Procfile` in the CLI `touch Procfile`
 
+Heroku config variables are set in the following way:
+
+|          Key          |          Value         |
+|:---------------------:|:----------------------:|
+| AWS_ACCESS_KEY_ID     | aws_access_key         |
+| AWS_SECRET_ACCESS_KEY | aws_secret_access_key  |
+| DATABASE_URL          | auto-generated         |
+| EMAIL_HOST_PASS       | email_pass_key              |
+| EMAIL_HOST_USER       | email_address             |
+| SECRET_KEY            | secret_key             |
+| STRIPE_PUBLIC_KEY     | stripe_public_key |
+| STRIPE_SECRET_KEY     | stripe_secret_key |
+| STRIPE_WH_SECRET      | stripe_webhook_key     |
+| USE_AWS               | True                   |
+
 
 #### AWS S3
 
