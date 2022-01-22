@@ -453,7 +453,54 @@ Secondly, configuration of an Amazon Web Services (AWS) S3 bucket to store the s
 
 ### IAM - Group with policy
 
+1. In the search bar input 'IAM' where a goup policy will be set up.
+1. In 'Access Management' choose 'User Groups' and create a group.
+1. Name the group accordingly with the bucket and create.
+1. At the IAM dashboard go to policies.
+1. Create policy and click on the JSON tab to import the managed policy.
+1. Copy accross the ARN like the below and select create:
 
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:*",
+            ],
+            "Resource": [
+                "arn:aws:s3:::YOUR-ARN",
+                "arn:aws:s3:::YOUR-ARN/*"
+            ]
+        }
+    ]
+}
+```
+
+### Attach group policy
+
+1. In 'User groups' - 'Access Management', click on the new group and go to the 'Permissions' tab
+1. Attach the policy.
+1. Go to the policy you have just created, then Select "Add Permissions".
+
+### IAM User
+
+1. Navigate back to IAM and click on Add new user.
+1. Give permission to the user then choose 'Next - Permissions'
+1. Choose the group to put the user into, continue until the user is created.
+1. Download csv file containing Access Key and Secret Access Key.
+
+These Keys must be added to environment variables in the project level settings.py file as follows:
+
+```
+if 'USE_AWS' in os.environ:
+    AWS_STORAGE_BUCKET_NAME = 'bucket_name'
+    AWS_S3_REGION_NAME = 'region'
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+```
 
 
 ### Wireframes
