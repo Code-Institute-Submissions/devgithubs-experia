@@ -402,6 +402,58 @@ Secondly, configuration of an Amazon Web Services (AWS) S3 bucket to store the s
 
 ### Setting up an AWS S3 bucket
 
+1. Create or login to existing AWS account.
+1. After login, navigate to S3 and create bucket.
+1. Name the bucket as you did for the Heroku app name.
+1. Navigate to the 'Block public access' part and uncheck 'Block public access'. Confirm and scroll to click 'Create bucket'.
+
+### Bucket properties
+
+1. Navigate to properties tab, scroll to end and click the 'edit' button.
+1. Choose 'Enable' static website hosting.
+1. Select 'Host static website', scroll to 'Documents inputs'.
+1. In the field, enter the 'index.html' and 'error.html'.
+1. Leave redirect empty and save changes.
+
+### Permissions
+
+1. Navigate to permissions tab. Scroll to bottom of page and click edit 'Cross-Origin Resource Sharing (CORS)" section'.
+1. Enter the following JSON config:
+```
+[{
+  "AllowedHeaders": ["
+  Authorization"
+  ],
+  "AllowedMethods": [
+    "Get"
+    ],
+  "AllowedOrigins": [
+    "*"
+    ],
+  "ExposeHeaders": [],
+}]
+```
+1. Save changes and go to 'Bucket policy', click edit. 
+
+### Bucket Policy
+
+1. Go to 'Policy Generator', select 'S3 Bucket Policy' from dropdown.
+1. Allow permissions:
+  - Effect = Allow
+  - Principle = *
+  - Actions = GetObject, GetObjectAcl, PutObject, PutObjectAcl and DeleteObject
+  - Amazon Resource Name =  under "Bucket ARN". Paste it into this box
+1. Click add statment and generate policy
+1. Copy the policy over into the bucket with '/*' on the end for all and save.
+
+### ACL - Access Control List
+
+1. Navigate to permissions tab and edit ACL section
+1. Find 'Everyone (public access)' and select the box under the Objects header. Accept and save.
+
+### IAM - Group with policy
+
+
 
 
 ### Wireframes
@@ -424,16 +476,3 @@ Secondly, configuration of an Amazon Web Services (AWS) S3 bucket to store the s
 
 <script src="https://gist.github.com/devgithubs/7916dd2aa8539d3d4be3b8469840f200.js"></script>
 
-
-| HTML                 |   | PEP8       |   | CSS            |   |
-|----------------------|---|------------|---|----------------|---|
-| Index                | ✔ | See report | ✔ | See W3C report | ✔ |
-| Experiences          | ✔ |            |   |                |   |
-| Experiences_Detail   | ✔ |            |   |                |   |
-| Host_Experience      | ✔ |            |   |                |   |
-| Edit_Host_Experience | ✔ |            |   |                |   |
-| Terms & Conditions   | ✔ |            |   |                |   |
-| Contact              | ✔ |            |   |                |   |
-| Wishlist             | ✔ |            |   |                |   |
-| Profile              | ✔ |            |   |                |   |
-| Bag                  | ✔ |            |   |                |   |
