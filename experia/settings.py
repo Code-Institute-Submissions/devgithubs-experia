@@ -31,7 +31,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# IN PRODUCTION
+DEBUG = False
 
 ALLOWED_HOSTS = ['experia-app.herokuapp.com', 'localhost', 'https://8000-devgithubs-experia-5f6dfywraj0.ws-eu27.gitpod.io']
 CSRF_TRUSTED_ORIGINS = ['https://experia-app.herokuapp.com', 'https://8000-devgithubs-experia-5f6dfywraj0.ws-eu27.gitpod.io']
