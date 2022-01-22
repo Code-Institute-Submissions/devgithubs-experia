@@ -36,8 +36,6 @@
                                 <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (high to low)</option>
                                 <option value="location_asc" {% if current_sorting == 'location_asc' %}selected{% endif %}>City (A-Z)</option>
                                 <option value="location_desc" {% if current_sorting == 'location_desc' %}selected{% endif %}>City (Z-A)</option>
-                                <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
-                                <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
                             </select>
                         </div>
                     </div>
@@ -92,6 +90,7 @@
                                                 <small class="text-muted">No Rating</small>
                                             {% endif %}
                                             <p><small class="text-muted"><i class="fas fa-map-marker-alt mr-1"></i>{{ experience.location }}</small></p>
+                                            <p><small class="text-muted"><i class="fas fa-watch"></i>{{ experience.duration }} mins</small></p>
                                         </div>
                                     </div>
                                 </div>
