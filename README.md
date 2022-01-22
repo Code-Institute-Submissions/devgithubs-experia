@@ -4,26 +4,51 @@
 
 <img src="">
 
-## Objective
+## Overview & Objective
+Experia is a web application that allows account holders to browse and buy unique experiences. Account holders also have the option of creating and managing their own experiences that they can sell on the website. 
+
 This Website was created for the purpose of implementing a fullstack Django framework website with Stripe payment integration.
 The project allows users to explore a range of different experiences, purchase them, and also create their own unique experiences available for purchase. The website was built using Bootsrap (HTML, CSS), JS, Python, Django, Stripe, AWS S3.
 
-## UX & Design
-
-
-## Strategy
-
-#### Project Goal
-The project goal or 'use case' of the website is to act as a platform where people can browse and purchase unique experiences in their own city or perhaps a city that they plan on visiting. There is also an option for a user to create their own unique experiences which they can make available for purchase.
-
-The project is also to give me experience building a full stack e-Commerce website that handles payments.
-
 #### Ideation
 The concept for Experia came from my own experiences travelling, I found sometimes it would be hard to find things to do in some cities or I was not interested in what was on offer.
+
+## UX & Design
+
+### Strategy
+#### Target Audience
+- Tourists.
+- City break enthusiasts. 
+- People who want to try interesting and alternative experiences.
+- People who have a unique talent, knowledge or skill and want to monetize it.
+
+#### Project Goal
+##### Personal
+The personal goal for this project is to give me experience building a full stack e-Commerce website that handles payments.
+##### Business 
+The commercial goal or 'use case' of the website is to act as a platform where people can browse and purchase unique experiences in their own city or perhaps a city that they plan on visiting. There is also an option for a user to create their own unique experiences which they can make available for purchase.
+
+### Project scope
+For the project to succeed in accomplishing it's objectives, a clear rule set must be established to keep the project on track. Mostly these objectives and features are tied in with the user stories and their goals. 
+
+- #### Define the project
+  - Connect objectives with creative strategies
+- #### Project tasks
+  - Preparing the build
+  - Information Architecture - database design
+  - Feature driven development - host, wishlist, profile, reviews.
+- #### Review
+  - Get feedback on design ideas and feature list
+- #### Build
+  - Commence build
+  - Continiously review, whats working and what is not
+
 #### Site owner goals
+- Have the skills to build a full stack e-Commerce website
 - Make the website design user-friendly
 - Make the website accessible for all
 - Retain users and create recurring visits
+
 #### User goals
 - Ease of use
 - Ease of navigation
@@ -76,24 +101,6 @@ The concept for Experia came from my own experiences travelling, I found sometim
 |                           28 | Site Owner     | Edit/update a review                                      | Review a particular experience                                                                              |   |   |
 |                           29 | Site Owner     | Delete a review                                           | Delete a review that may be offensive or against the terms of the site                                      |   |   |
 
-
-
-
-### Project scope
-
-For the project to succeed in accomplishing it's objectives, a clear rule set must be established to keep the project on track. Mostly these objectives and features are tied in with the user stories and their goals. 
-
-- #### Define the project
-  - Connect objectives with creative strategies
-- #### Project tasks
-  - Preparing the build
-  - Information Architecture - database design
-  - Feature driven development 
-- #### Review
-  - Get feedback on design ideas and feature list
-- #### Build
-  - Commence build
-  - Continiously review
 
 
 ### Project Structure
@@ -309,9 +316,12 @@ they are shown an order summary of the experinces they are buying and the cost.
     - The heart icon has also been used extensively, as a website user this is generally known to be a way of liking or favouriting something. This is the reason it was chosen as the way to add an experience to the users wishlist. 
 
 ### Features
-
 -   Responsive on all device sizes
 -   Interactive elements
+### Stand out features
+- Wishlist - add interesting experiences to your personal wishlist
+- Experience detail reviews - leave a review and rating about a certain experience to let others know what it was like
+- Host an experience option - Create and manage your own unique experience that anybody can purchase and enjoy
 
 ## Technologies Used
 
@@ -327,7 +337,7 @@ they are shown an order summary of the experinces they are buying and the cost.
 - [Google Fonts](https://fonts.google.com/) - Used for the typography of the site.
 - [Font Awesome](https://fontawesome.com/) - Used for the icons of the site.
 - [Bootstrap](https://getbootstrap.com/) - Used for the styling of the site.
-- [jQuery](https://jquery.com/) - Used instead of vanilla JS.
+- [jQuery](https://jquery.com/) - Used instead of Vanilla JS.
 
 #### Database
 - [SQLite](https://www.sqlite.org/) - Used for the development database of the site.
@@ -355,11 +365,12 @@ they are shown an order summary of the experinces they are buying and the cost.
 - [PEP8 Markup Validator](http://pep8online.com/) Python PEP8 validator
 - [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) CSS validator
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) HTML validator
+- [Temp Mail](https://temp-mail.org/en/) Anonymous email to test email sending
 
 
 ## Testing
 
-Testing documents can be found [**here!**](TESTING.md)
+Testing documentation can be found [**here!**](TESTING.md)
 
 
 
@@ -517,7 +528,53 @@ if 'USE_AWS' in os.environ:
     AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
 ```
 
+## Deploying the project locally
+The below is a step-by-step guide on how to deploy Experia in your local environment.
 
+### Requirements
+- VSCode or similar IDE
+- Python - version at the time of writing is v4.01
+- PIP package manager
+- Stripe
+
+#### Deployment steps
+1. In GitHub, clone a copy of the Experia repository by navigating to the top of the Experia page and select the 'Code' dropdown button, while there select 'Download zip' and extract to a folder on your machine.
+This may also be done by running the below command in the terminal:
+`git clone https://github.com/devgithubs/experia.git`
+
+1. Open the IDE of your choice
+1. Set up a virtual environment to keep all packages within state. Run the comand:
+`pip install pipenv`
+1. In the root directory create a new folder named '.venv'
+1. To launch the virtual environment run the below command:
+`[sourcefolder]\scripts\activate\activate.bat`
+1. To recursively install all the necessary packages that the project depends on, run this command:
+`pipenv install -r requirements.txt`
+1. Create a folder in the root directory called env.py. Inside this file add the following environment variables:
+```
+import os
+
+os.environ["SECRET_KEY"] = "[Your Secret Key]"
+os.environ["DEV"] = "1"
+os.environ["HOSTNAME"] = "0.0.0.0"
+os.environ["STRIPE_PUBLIC_KEY"] = "[Your Stripe Key]"
+os.environ["STRIPE_SECRET_KEY"] = "[Your Stripe Secret Key]"
+os.environ["DATABASE_URL"] = "[Your DB URL]"
+```
+
+#### Database Provisioning
+- To set up your database the below migration command must be run:
+`python manage.py migrate`
+- Next, create a superuser to access the Django admin panel, do this by running:
+`python manage.py createsuperuser`
+- You can then spin up your server by running the command:
+`python manage.py runserver`
+- If everything has been set correctly you should be prompted to run your the site locally on port 8000
+- Interrupt the server by typing ctrl+c and add these fixture files:
+```
+python manage.py loaddata fixtures/categories.json
+python manage.py loaddata fixtures/experiences.json
+```
 ### Wireframes
 
     -   Home Page Wireframe - [View](https://github.com/)
@@ -527,14 +584,27 @@ if 'USE_AWS' in os.environ:
     -   Contact Us Page Wireframe - [View](https://github.com/)
 
 
-## Features
+## Further Development
+- Develop Experia contact email to handle customer/user queries
+- Manual/Automated reviews of user created experiences to ensure they meet general guidlines on code of conduct
+- Date and Time selection - Implement a booking timetable of available experiences based on the hosts schedule, so both the customer and the host know experience availability and demand.
+- Additional functionality and customisation with regards to defensive programming. Confirmation modals on delete functions.
+- Analytics
+- Domain hosting
 
--   Responsive on all device sizes
--   Interactive elements
+## Credits
 
+### Content
+The text and image data that was loaded via the fixture files was sourced but not limited to
 
-<script src="https://gist.github.com/devgithubs/1eab1bd7d941dbe7461e2bf06aff673f.js"></script>
+- [Airbnb Experiences](https://www.airbnb.ie/s/experiences)
 
+### References
 
-<script src="https://gist.github.com/devgithubs/7916dd2aa8539d3d4be3b8469840f200.js"></script>
+Code Institute - Code adapted from the Boutique Ado follow along project with regard to app views, forms and templating
+Bootstrap - Components used throughout the project and to create the Index page 
+[MDB](https://mdbootstrap.com/docs/standard/navigation/footer/) For custom footer
 
+### Acknowledgements
+- Code Institute - Tutor support team
+- Mentor - [Richard Wells](https://github.com/D0nni387/)
