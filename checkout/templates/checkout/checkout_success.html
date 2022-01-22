@@ -61,18 +61,18 @@
                     <div class="row">
                         <div class="col-12 col-md-4">
                             <p class="small mb-0 text-black font-weight-bold">
-                                {{ item.product.name }}{% if item.product_size %} - Size {{ item.product.size|upper }}{% endif %}
+                                {{ item.experience.name }}
                             </p>
                         </div>
                         <div class="col-12 col-md-8 text-md-right">
-                            <p class="small mb-0">{{ item.quantity }} @ €{{ item.product.price }} each</p>
+                            <p class="small mb-0">{{ item.quantity }} @ €{{ item.experience.price }} each</p>
                         </div>
                     </div>
                     {% endfor %}
 
                     <div class="row">
                         <div class="col">
-                            <small class="text-muted">Delivering To:</small>
+                            <small class="text-muted">Billing To:</small>
                         </div>
                     </div>
 
@@ -195,11 +195,11 @@
                         <span class="text-uppercase">Return to profile</span>
                     </a>
                 {% else %}
-                    <a href="{% url 'experiences' %}?category=new_arrivals,deals,clearance" class="btn btn-black rounded-0 my-2">
+                    <a href="{% url 'experiences' %}" class="btn btn-black rounded-0 my-2">
                         <span class="icon mr-2">
                             <i class="fas fa-gifts"></i>
                         </span>
-                        <span class="text-uppercase">Now check out the latest deals!</span>
+                        <span class="text-uppercase">Keep Exploring!</span>
                     </a>
                 {% endif %}
 			</div>
