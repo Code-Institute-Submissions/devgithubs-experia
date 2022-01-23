@@ -216,16 +216,90 @@ Google Lighthouse audits performance, accessibility and search engine optimizati
 | Test       | Making a wish list                                                                                                                                                                                                                                                                                                                                                                  |
 | Result     | The heart icon is the wish list. I was drawn straight to it. I can select any Experience and click on the heart at the right top corner of the experience image, then appears an alert in the checkout icon confirming that the Experience is added to my wish list. I can also add from experiences detail page. All my selected favourited Experiences were on my Wish list page. |
 | Pass       | Satisfactory and positive results. All steps worked successfully.                                                                                                                                                                                                                                                                                                                   |
+### Purchase & checkout
+
+| User Story | 18                                                                                                                                                                                                                                                                                               |
+|------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Test       | Updating the number of guests for an Experience dynamically.                                                                                                                                                                                                                                     |
+| Result     | After selecting the experience, in the checkout I updated the number of guests from1 to 4, updated the number selecting Update icon which the price was also updated, then clicked Secure checkout. In the purchase section, the order summary appears with updated price and number of guests.  |
+| Pass       | Satisfactory and positive results. All steps worked successfully.                                                                                                                                                                                                                                |
 
 
+| User Story | 19                                                                                       |
+|------------|------------------------------------------------------------------------------------------|
+| Test       | View items in shopping bag                                                               |
+| Result     | In the checkout area I can clearly see and identify the total cost before the purchase.  |
+| Pass       | Satisfactory and positive results. All steps worked successfully.                        |
 
 
+| User Story | 20                                                                                                                                                                  |
+|------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Test       | Adjust quantity, date and time of Experiences in shopping bag.                                                                                                      |
+| Result     | It is possible to adjust quantity of Experiences in checkout area but date and time are still not available, these option will be included in future developments.  |
+| Pass       | Satisfactory and positive results. All steps worked successfully.                                                                                                   |
+
+
+| User Story | 21                                                                                                                            |
+|------------|-------------------------------------------------------------------------------------------------------------------------------|
+| Test       | Enter my payment information.                                                                                                 |
+| Result     | In the checkout I can easily fill the information and quickly complete the purchase with the Stripe test card number (42424). |
+| Pass       | Satisfactory and positive results. All steps worked successfully.                                                             |
+
+
+| User Story | 22                                                                                      |
+|------------|-----------------------------------------------------------------------------------------|
+| Test       | Processing safely payment information.                                                  |
+| Result     | The checkout payment was processed by Stripe and I felt secure and safe with no hassle. |
+| Pass       | Satisfactory and positive results. All steps worked successfully.                       |
+
+
+| User Story | 23                                                                                                              |
+|------------|-----------------------------------------------------------------------------------------------------------------|
+| Test       | View order confirmation after checkout.                                                                         |
+| Result     | After checkout I can double check order details on the confirmation page and through e-mail order confirmation. |
+| Pass       | Satisfactory and positive results. All steps worked successfully.                                               |
+
+
+| User Story | 24                                                                                                                                            |
+|------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
+| Test       | E-mail confirmation after checkout.                                                                                                           |
+| Result     | After purchasing the Experience I received an e-mail with order confirmation and details, that can be used for records and proof of purchase. |
+| Pass       | Satisfactory and positive results. All steps worked successfully.                                                                             |
+
+
+### Admin & store management
+
+| User Story | 25                                                                                                                               |
+|------------|----------------------------------------------------------------------------------------------------------------------------------|
+| Test       | Add a product to store                                                                                                           |
+| Result     | As an Admin I was easily able to add a new experience to the store via the Host form facility and also in the Django admin panel |
+| Pass       | Satisfactory and positive results. All steps worked successfully.                                                                |
+
+| User Story | 26                                                                                                                                           |
+|------------|----------------------------------------------------------------------------------------------------------------------------------------------|
+| Test       | Edit/update a product                                                                                                                        |
+| Result     | As an Admin I was easily able to Change experience prices, descriptions, images etc. in the Host form facility and in the Django admin panel |
+| Pass       | Satisfactory and positive results. All steps worked successfully.                                                                            |
+
+| User Story | 27                                                                                                                                      |
+|------------|-----------------------------------------------------------------------------------------------------------------------------------------|
+| Test       | Edit/update a product                                                                                                                   |
+| Result     | As an Admin I was easily able to Remove experiences that are no longer for sale in the Host form facility and in the Django admin panel |
+| Pass       | Satisfactory and positive results. All steps worked successfully.                                                                       |
+
+| User Story | 28                                                                                                                       |
+|------------|--------------------------------------------------------------------------------------------------------------------------|
+| Test       | Edit/update a review                                                                                                     |
+| Result     | As an Admin I was able to Review a particular experience in the Experiences detail webpage and in the Django admin panel |
+| Pass       | Satisfactory and positive results. All steps worked successfully.                                                        |
+
+| User Story | 29                                                                                                                                                               |
+|------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Test       | Delete a review                                                                                                                                                  |
+| Result     | As an Admin I was able to Delete a review that may be offensive or against the terms of the site in the Experiences detail webpage and in the Django admin panel |
+| Pass       | Satisfactory and positive results. All steps worked successfully.                                                                                                |
 
 ## Bugs
-- AWS bucket - Media file not rendering uploaded images to website
-- CSRF token - Had to add CSRF_TRUSTED_ORIGINS to settings.py
-- Webhook handler 'payment_intent.succeeded' 500 error
-- Footer floating
 
 - Issue: AWS S3 images were not being served after manual upload.
 - Cause: On set up of the bucket the media file was at the wrong level of hierarchy. 
