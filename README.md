@@ -1,10 +1,12 @@
 # EXPERIA - The unique experience platform.
 
-[View the live project here.](https://experia-app.herokuapp.com/)
+
+[View Experia live here.](https://experia-app.herokuapp.com/)
+
 
 ![](README/responsive.PNG)
 
-(_____________________________________________________________________________)
+
 
 ## Overview & Objective
 Experia is a web application that allows account holders to browse and buy unique experiences. Account holders also have the option of creating and managing their own experiences that they can sell on the website. 
@@ -319,19 +321,19 @@ they are shown an order summary of the experinces they are buying and the cost.
 
 ### Wireframes
 
-    -   Home Page Wireframe - ![View](README/landing.pdf)
+-   Home Page Wireframe - [View](README/landing.pdf)
 
-    -   Profile Wireframe - ![View](README/profile.pdf)
+-   Profile Wireframe - [View](README/profile.pdf)
 
-    -   All Experiences Wireframe - ![View](README/all experiences.pdf)
+-   All Experiences Wireframe - [View](README/all experiences.pdf)
 
-    -   Experiences Wireframe - ![View](README/experiences.pdf)
+-   Experiences Wireframe - [View](README/experiences.pdf)
 
-    -   Experiences Detail Wireframe - ![View](README/experiences detail.pdf)
+-   Experiences Detail Wireframe - [View](README/experiences detail.pdf)
 
-    -   Host Wireframe - ![View](README/host.pdf)
+-   Host Wireframe - [View](README/host.pdf)
 
-    -   Checkout Wireframe - ![View](README/checkout.pdf)
+-   Checkout Wireframe - [View](README/checkout.pdf)
 
 
 
@@ -613,10 +615,10 @@ The text and image data that was loaded via the fixture files was sourced but no
 
 ### References
 
-Code Institute - Code adapted from the Boutique Ado follow along project with regard to app views, forms and templating
-Bootstrap - Components used throughout the project and to create the Index page 
-[MDB](https://mdbootstrap.com/docs/standard/navigation/footer/) For custom footer
-[Start Bootstrap](https://startbootstrap.com/template/business-frontpage) Elements of the landing page
+- Code Institute - Code adapted from the Boutique Ado follow along project with regard to app views, forms and templating
+- Bootstrap - Components used throughout the project and to create the Index page 
+- [MDB](https://mdbootstrap.com/docs/standard/navigation/footer/) For custom footer
+- [Start Bootstrap](https://startbootstrap.com/template/business-frontpage) Elements of the landing page
 
 ### Acknowledgements
 - Code Institute - Tutor support team
