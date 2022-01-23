@@ -162,6 +162,65 @@ Google Lighthouse audits performance, accessibility and search engine optimizati
 
 ### Host an experience
 
+| User Story | 10                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+|------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Test       | Creating and hosting an experience                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| Result     | At the top of the website or at the Experia Icon (mobile) at the right corner I can select Host an experience and create and host my own experience, I fill out the form with experience name, description, Experience category, Location, Price, Duration and the host name. I also have the option to upload an image to feature my experience. I select the option Submit and I can visualise the experiences, where I can manage them edit and remove. |
+| Pass       | Satisfactory and positive results. All steps worked successfully.                                                                                                                                                                                                                                                                                                                                                                                          |
+
+
+| User Story | 11                                                                                                                                                                                                                                                  |
+|------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Test       | Hosting my experience.                                                                                                                                                                                                                              |
+| Result     | I created the many experiences selecting the Astronaut icon at the right corner Host an experience. In my hosted experiences I can edit or remove the experience. My Experience appears in the list of all Experiences, where anybody can purchase. |
+| Pass       | Satisfactory and positive results. All steps worked successfully.                                                                                                                                                                                   |
+
+
+### Sorting & searching
+
+| User Story | 12                                                                                                                                           |
+|------------|----------------------------------------------------------------------------------------------------------------------------------------------|
+| Test       | Sort list of products/services                                                                                                               |
+| Result     | Navigating to the Experiences page I can sort by price (low-high/high-low), rating (low-high/high-low), city (A-Z/Z-A) and all Experiences.  |
+| Pass       | Satisfactory and positive results. All steps worked successfully.                                                                            |
+
+| User Story | 13                                                                                                   |
+|------------|------------------------------------------------------------------------------------------------------|
+| Test       | Sort category of products/services                                                                   |
+| Result     | Under the Host an Experience drop down, I was able to filter the different categories of Experiences |
+| Pass       | Worked as expected                                                                                   |
+
+
+| User Story | 14                                                                                                                                                                                                  |
+|------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Test       | Sort multiple categories simultaneously.                                                                                                                                                            |
+| Result     | In the search bar I can type key words to look for specific Experiences, when the Experience is found I can select the Sort by icon and sort those Experiences by price, rating, city and category. |
+| Pass       | Satisfactory and positive results. All steps worked successfully.                                                                                                                                   |
+
+
+| User Story | 15                                                                                                                                                        |
+|------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Test       | Search bar for product/service by name or description.                                                                                                    |
+| Result     | In the search bar I can sort by city, key word or other description. When the description is not available appears a message 0 Experiences found for “…”. |
+| Pass       | Satisfactory and positive results. All steps worked successfully.                                                                                         |
+
+
+| User Story | 16                                                                                                                                                                                    |
+|------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Test       | What I’ve searched and number of results                                                                                                                                              |
+| Result     | In the Search bar I can see the history of my searches.  When I type a key word and the Experience is found, the quantity of Experiences found appears above the Experiences results. |
+| Pass       | Satisfactory and positive results. All steps worked successfully.                                                                                                                     |
+
+| User Story | 17                                                                                                                                                                                                                                                                                                                                                                                  |
+|------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Test       | Making a wish list                                                                                                                                                                                                                                                                                                                                                                  |
+| Result     | The heart icon is the wish list. I was drawn straight to it. I can select any Experience and click on the heart at the right top corner of the experience image, then appears an alert in the checkout icon confirming that the Experience is added to my wish list. I can also add from experiences detail page. All my selected favourited Experiences were on my Wish list page. |
+| Pass       | Satisfactory and positive results. All steps worked successfully.                                                                                                                                                                                                                                                                                                                   |
+
+
+
+
+
 ## Bugs
 - AWS bucket - Media file not rendering uploaded images to website
 - CSRF token - Had to add CSRF_TRUSTED_ORIGINS to settings.py
