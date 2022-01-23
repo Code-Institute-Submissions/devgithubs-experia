@@ -90,6 +90,24 @@ Google Lighthouse audits performance, accessibility and search engine optimizati
 - Best Practices - 94/100
 - SEO - 83/100
 
+## User Stories
+
+| User Story | 1                                                                                                                                |
+|------------|----------------------------------------------------------------------------------------------------------------------------------|
+| Test       | Navigating through the available experience/service, I chose the service ‘Forge a silver ring with Jewellers’, added to the bag. |
+| Result     | I was able to look at multiple different experiences and had the option to add purchase                                          |
+| Pass       | Satisfactory and positive results. All steps worked successfully.                                                                |
+
+
+
+| Test case | Number 2                                                                                                                                                                                                                                          |
+|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Test      | Navigating through the website in the option Explore to identify the services, respective prices, description, rating availability and image.                                                                                                     |
+| Result    | Opening each service I can identify a more detailed description of the service, what kind of service it is (e.g. sightseeing, art and culture, food and drink) and choose how many guests I will bring with me, to make a purchase for the group. |
+| Pass      | Satisfactory and positive results. All steps worked successfully.                                                                                                                                                                                 |
+
+
+
 
 ## Bugs
 - AWS bucket - Media file not rendering uploaded images to website
