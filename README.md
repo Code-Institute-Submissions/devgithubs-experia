@@ -392,8 +392,13 @@ they are shown an order summary of the experinces they are buying and the cost.
 
 ## Testing
 
-Testing documentation can be found [**here!**](TESTING.md)
-
+Extensive testing documentation can be found [**here!**](TESTING.md)
+- User Journey
+- Security
+- Validation Testing
+- Responsivness
+- User Stories
+- Bugs
 
 
 ## Deployment
@@ -619,6 +624,7 @@ The text and image data that was loaded via the fixture files was sourced but no
 - Bootstrap - Components used throughout the project and to create the Index page 
 - [MDB](https://mdbootstrap.com/docs/standard/navigation/footer/) For custom footer
 - [Start Bootstrap](https://startbootstrap.com/template/business-frontpage) Elements of the landing page
+- [Dennis Ivy](https://www.dennisivy.com/post/django-class-based-views/) Use of class based view
 
 ### Acknowledgements
 - Code Institute - Tutor support team
