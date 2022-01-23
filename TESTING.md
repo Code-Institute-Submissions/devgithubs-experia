@@ -3,7 +3,7 @@ This README details the steps taken to stress test and validate the Experia proj
 
 
  
-![](README/Activity.pdf)
+![Activity](README/Activity.pdf)
 
 ## Journey of a typical Experia user
 
@@ -91,6 +91,7 @@ Google Lighthouse audits performance, accessibility and search engine optimizati
 - SEO - 83/100
 
 ## User Stories
+### View & Navigate
 
 | User Story | 1                                                                                                                                |
 |------------|----------------------------------------------------------------------------------------------------------------------------------|
@@ -100,14 +101,66 @@ Google Lighthouse audits performance, accessibility and search engine optimizati
 
 
 
-| Test case | Number 2                                                                                                                                                                                                                                          |
+| User Story |  2                                                                                                                                                                                                                                          |
 |-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Test      | Navigating through the website in the option Explore to identify the services, respective prices, description, rating availability and image.                                                                                                     |
 | Result    | Opening each service I can identify a more detailed description of the service, what kind of service it is (e.g. sightseeing, art and culture, food and drink) and choose how many guests I will bring with me, to make a purchase for the group. |
 | Pass      | Satisfactory and positive results. All steps worked successfully.                                                                                                                                                                                 |
 
 
+| User Story | 3                                                                                                                     |
+|------------|-----------------------------------------------------------------------------------------------------------------------|
+| Test       | A promotion/coupon system was not implemented in this version of the app, currently featuring the range of services.  |
+| Result     | It is planned for future development.                                                                                 |
+| Pass       | Out of scope.                                                                                                         |
 
+
+| User Story | 4                                                                                                                                                     |
+|------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Test       | Access my order history and budget spent.                                                                                                             |
+| Result     | Accessing my profile I can visualise my total purchases in the order history and the amount I have paid. I can access any information I want anytime. |
+| Pass       | Satisfactory and positive results. All steps worked successfully.                                                                                     |
+
+
+### Registration & user accounts
+
+| User Story | 5                                                                                                                                                                                                                                                          |
+|------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Test       | Register for an account.                                                                                                                                                                                                                                   |
+| Result     | I registered for an account and received an e-mail with a link to confirm my e-mail address. Clicking on the link I was redirected to the website page to press the icon Confirm authorising my account. After that I could access my account and profile. |
+| Pass       | Satisfactory and positive results. All steps worked successfully.                                                                                                                                                                                          |
+
+
+| User Story | 6                                                                                                                                                                       |
+|------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Test       | Login and logout in my account                                                                                                                                          |
+| Result     | Accessing the website I can log in with my email address and password at the top right corner, In the same location I can also logout with a confirmation to sign out.  |
+| Pass       | Satisfactory and positive results. All steps worked successfully.                                                                                                       |
+
+
+| User Story | 7                                                                                                                            |
+|------------|------------------------------------------------------------------------------------------------------------------------------|
+| Test       | I created an account, logged in and out, but forgot my password when I logged in again so selected the option reset password |
+| Result     | I received the password reset link through my e-mail and reset my account password                                           |
+| Pass       | Satisfactory results. The reset link received in my e-mail was sent straight away after selecting the option reset password. |
+
+
+| User Story | 8                                                                                           |
+|------------|---------------------------------------------------------------------------------------------|
+| Test       | E-mail confirmation after registration.                                                     |
+| Result     | After registering as a user I received an e-mail with a link to securely confirm my e-mail. |
+| Pass       | Satisfactory and positive results. All steps worked successfully.                           |
+
+
+
+| User Story | 9                                                                                                                                            |
+|------------|----------------------------------------------------------------------------------------------------------------------------------------------|
+| Test       | Personalised user profile.                                                                                                                   |
+| Result     | In my profile I can visualise my order history, update and view my personal details and access each order individually through order number. |
+| Pass       | Satisfactory and positive results. All steps worked successfully.                                                                            |
+
+
+### Host an experience
 
 ## Bugs
 - AWS bucket - Media file not rendering uploaded images to website
