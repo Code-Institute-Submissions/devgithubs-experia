@@ -2,7 +2,7 @@
 
 [View the live project here.](https://experia-app.herokuapp.com/)
 
-<img src="">
+[](README/responsive.PNG)
 
 ## Overview & Objective
 Experia is a web application that allows account holders to browse and buy unique experiences. Account holders also have the option of creating and managing their own experiences that they can sell on the website. 
@@ -315,6 +315,15 @@ they are shown an order summary of the experinces they are buying and the cost.
     - There has been a lot of consideration to the use of icons throughout the website. Since the idea stage the theme of the site has been about exploration hence the reason for the Astronaut icon used throughout.
     - The heart icon has also been used extensively, as a website user this is generally known to be a way of liking or favouriting something. This is the reason it was chosen as the way to add an experience to the users wishlist. 
 
+### Wireframes
+
+    -   Home Page Wireframe - [View]()
+
+    -   Mobile Wireframe - [View](https://github.com/)
+
+    -   Contact Us Page Wireframe - [View](https://github.com/)
+
+
 ### Features
 -   Responsive on all device sizes
 -   Interactive elements
@@ -575,14 +584,6 @@ os.environ["DATABASE_URL"] = "[Your DB URL]"
 python manage.py loaddata fixtures/categories.json
 python manage.py loaddata fixtures/experiences.json
 ```
-### Wireframes
-
-    -   Home Page Wireframe - [View](https://github.com/)
-
-    -   Mobile Wireframe - [View](https://github.com/)
-
-    -   Contact Us Page Wireframe - [View](https://github.com/)
-
 
 ## Further Development
 - Develop Experia contact email to handle customer/user queries
@@ -604,6 +605,7 @@ The text and image data that was loaded via the fixture files was sourced but no
 Code Institute - Code adapted from the Boutique Ado follow along project with regard to app views, forms and templating
 Bootstrap - Components used throughout the project and to create the Index page 
 [MDB](https://mdbootstrap.com/docs/standard/navigation/footer/) For custom footer
+[Start Bootstrap](https://startbootstrap.com/template/business-frontpage) Elements of the landing page
 
 ### Acknowledgements
 - Code Institute - Tutor support team
