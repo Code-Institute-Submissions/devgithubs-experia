@@ -2,7 +2,9 @@
 
 [View the live project here.](https://experia-app.herokuapp.com/)
 
-[](README/responsive.PNG)
+![](README/responsive.PNG)
+
+(_____________________________________________________________________________)
 
 ## Overview & Objective
 Experia is a web application that allows account holders to browse and buy unique experiences. Account holders also have the option of creating and managing their own experiences that they can sell on the website. 
@@ -317,11 +319,20 @@ they are shown an order summary of the experinces they are buying and the cost.
 
 ### Wireframes
 
-    -   Home Page Wireframe - [View]()
+    -   Home Page Wireframe - ![View](README/landing.pdf)
 
-    -   Mobile Wireframe - [View](https://github.com/)
+    -   Profile Wireframe - ![View](README/profile.pdf)
 
-    -   Contact Us Page Wireframe - [View](https://github.com/)
+    -   All Experiences Wireframe - ![View](README/all experiences.pdf)
+
+    -   Experiences Wireframe - ![View](README/experiences.pdf)
+
+    -   Experiences Detail Wireframe - ![View](README/experiences detail.pdf)
+
+    -   Host Wireframe - ![View](README/host.pdf)
+
+    -   Checkout Wireframe - ![View](README/checkout.pdf)
+
 
 
 ### Features
