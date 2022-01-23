@@ -325,11 +325,11 @@ they are shown an order summary of the experinces they are buying and the cost.
 
 -   Profile Wireframe - [View](README/profile.pdf)
 
--   All Experiences Wireframe - [View](README/all%20experiences.pdf)
+-   All Experiences Wireframe - [View](README/allexperiences.pdf)
 
 -   Experiences Wireframe - [View](README/experiences.pdf)
 
--   Experiences Detail Wireframe - [View](README/experiences%20detail.pdf)
+-   Experiences Detail Wireframe - [View](README/experiencesdetail.pdf)
 
 -   Host Wireframe - [View](README/host.pdf)
 
