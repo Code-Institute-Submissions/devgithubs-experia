@@ -3,7 +3,7 @@ This README details the steps taken to stress test and validate the Experia proj
 
 
  
-![Activity](README/Activity.pdf)
+[Activity](README/Activity.pdf)
 
 ## Journey of a typical Experia user
 
@@ -78,13 +78,13 @@ Warnings were ignored.
 ### Google Lighthouse 
 Google Lighthouse audits performance, accessibility and search engine optimization of web pages for quality.
 
-- Google Lighthouse - ![Desktop](README/lighthouse_desktop.PNG)
+- Google Lighthouse - Desktop ![Desktop](README/lighthouse_desktop.PNG)
 - Performance - 89/100
 - Accessibility - 93/100
 - Best Practices - 93/100
 - SEO - 80/100
 
-- Google Lighthouse - ![Mobile](README/lighthouse_mobile.PNG)
+- Google Lighthouse - Mobile ![Mobile](README/lighthouse_mobile.PNG)
 - Performance - 84/100
 - Accessibility - 93/100
 - Best Practices - 94/100
