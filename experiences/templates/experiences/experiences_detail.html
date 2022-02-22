@@ -128,6 +128,7 @@
                         <small class="text-muted">No Rating</small>
                     {% endif %}
                     <p><small class="text-muted"><i class="fas fa-map-marker-alt mr-1"></i>{{ experience.location }}</small></p>
+                    {% if user.is_authenticated %}
                     <form class="form" action="{% url 'add_to_wishlist' experience.id %}" method="POST">
                         {% csrf_token %}
                         <button type="submit" class="btn" data-toggle="tooltip" data-placement="top" title="Add to wishlist">
@@ -135,6 +136,11 @@
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </button></p>
                     </form>
+                    {% else %}
+                    <a href="{% url 'account_login' %}"  class="btn" data-toggle="tooltip" data-placement="top" title="Add to wishlist">
+                        <i class="fas fa-heart fa-lg"></i>
+                    </a></p>
+                    {% endif %}
                     <hr>
                     <h3 class="bold">What you'll be doing</h3>
                     <p class="mt-2">{{ experience.description }}</p>
