@@ -11,7 +11,7 @@ class Wishlist(models.Model):
     experiences = models.ManyToManyField(Experiences, through="WishlistItem")
 
     def __str__(self):
-        return Wishlist, f'({self.user})'
+        return str(self.user)
 
 
 class WishlistItem(models.Model):
@@ -28,6 +28,3 @@ class WishlistItem(models.Model):
                              null=False,
                              blank=False,
                              on_delete=models.CASCADE)
-
-    def __str__(self):
-        return self.wish.name
