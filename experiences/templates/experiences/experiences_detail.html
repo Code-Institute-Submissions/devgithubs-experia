@@ -28,7 +28,9 @@
                 <hr>
                 <div class="mb-3">
                     <h2 class="logo-font mb-6">reviews
+                        {% if user.is_authenticated %}
                         <a href="{% url 'add_review' experience.id %}" data-toggle="modal" data-target="#addReviewModal" class="btn btn-outline-warning btn-sm text-bold m-2"><span>Add</span></a>
+                        {% endif %}
                     </h2>
                     <h5 class="text-muted">See what others think of this experience</h5>
                     <hr>
@@ -173,7 +175,11 @@
                                     </span>
                                     <span class="text-uppercase">Keep Exploring</span>
                                 </a>
+                                {% if user.is_authenticated %}
                                 <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
+                                {% else %}
+                                <a href="{% url 'account_login' %}" class="btn btn-black rounded-0 text-uppercase mt-5">Add to bag</a>
+                                {% endif %}
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
