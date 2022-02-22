@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock%}
+
+{% block content %}
+<div class="container mb-2">
+    <div class="row">
+        <div class="col">
+            <hr>
+            <h2 class="logo-font mb-4">Hmmm, something is not quite right here..... &#128531;</h2>
+            <h3>Error: 500</h3>
+            <p>The server is not responding, that's all we know!</p>
+            <a href="{% url 'home' %}" class="btn btn-outline-black rounded-0">
+                <span class="font-weight-bold">Return home!</span>
+            </a>
+            <hr>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
